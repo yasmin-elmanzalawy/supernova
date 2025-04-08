@@ -22,7 +22,7 @@ export default function Home() {
             <h1 className="text-4xl md:text-6xl font-bold m-5">
               SUPERNOVA GAMING
             </h1>
-            <p className="text-3xl md:text-6xl font-light m-5">
+            <p className="text-3xl md:text-6xl font-light m-5 ">
               PARALLEL UNIVERSE FOR GAMERS
             </p>
 
@@ -60,7 +60,21 @@ export default function Home() {
         </div>
       </div>
       {/* second container */}
-    
+      <div className="bg-[radial-gradient(ellipse_at_center,_#9545FF,_#592999)] flex flex-col md:flex-row">
+        <div className="md:w-[50%] flex flex-col justify-center text-white p-8 ">
+          <h3 className="text-5xl font-bold pb-12">Discipline. Innovation. Altruism.</h3>
+          <p className="text-2xl pb-8">
+            We tailor our services to meet each client's needs, helping them
+            grow and achieve their goals within their budget. We prioritize
+            innovation, collaboration, quality, expertise and integrity,
+            ensuring top-quality solutions that elevate the gaming experience
+          </p>
+            <Link  to="/about">                        
+          <button className=" self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">About us</button></Link>
+        </div>
+        <div className="md:w-[50%]"><img className="block w-[100%]" src={homeSec2} alt="Gaming Arena" />
+        </div>
+      </div>
     </div>
   );
 }
