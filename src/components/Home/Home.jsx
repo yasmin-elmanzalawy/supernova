@@ -75,6 +75,13 @@ export default function Home() {
         <div className="md:w-[50%]"><img className="block w-[100%]" src={homeSec2} alt="Gaming Arena" />
         </div>
       </div>
+      {/* our services section */}
+      <div className="bg-[#1F1F1F] p-5">
+        <h3 className="text-5xl font-bold text-white text-center">
+          Our services
+        </h3>
+
+      </div>
     </div>
   );
 }
