@@ -82,6 +82,20 @@ export default function Home() {
         </h3>
 
       </div>
+      {/* our clients section */}
+      <div className="bg-[#101010] p-5">
+        <h3 className="text-5xl font-bold text-white text-center">
+          Our Clients
+        </h3>
+
+      </div>
+      {/* our teams section */}
+      <div className="bg-[#101010] p-5">
+        <h3 className="text-5xl font-bold text-white text-center">
+          Our Team
+        </h3>
+
+      </div>
     </div>
   );
 }
