@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
+import ServicesCarousel from '../ServicesCarousel/ServicesCarousel'
 import heroBg from "../../assets/herobg.jpg";
 import leftArrow from "../../assets/leftarrow.png";
 import rightArrow from "../../assets/rightarrow.png";
 import homeSec2 from "../../assets/home-sec2.png";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
 
 export default function Home() {
   const [hovered, setHovered] = useState(false);
@@ -80,7 +83,7 @@ export default function Home() {
         <h3 className="text-5xl font-bold text-white text-center">
           Our services
         </h3>
-
+       <ServicesCarousel />
       </div>
       {/* our clients section */}
       <div className="bg-[#101010] p-5">
