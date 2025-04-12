@@ -1,5 +1,9 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import lefttop from "../../assets/lefttop.png";
+import leftbtm from "../../assets/leftbtm.png";
+import righttop from "../../assets/righttop.png";
+import rightbtm from "../../assets/rightbtm.png";
 
 const services = [
   {
@@ -75,18 +79,47 @@ export default function StyledCarousel() {
     >
       <div className="relative flex justify-center items-center">
         {/* Arrows */}
+
         <button
-          className="absolute left-4 z-20 p-3 bg-white/10 hover:bg-white/20 rounded-full"
+          className="arrow-button left absolute left-[-10px] md:left-[50px] z-20 p-3 rounded-full overflow-hidden group"
           onClick={() => paginate(-1)}
         >
-          {/* Left Arrow Icon */}
+          <div className="relative flex flex-col items-center justify-center w-[50px] md:w-[110px] h-24">
+            <img
+              src={lefttop}
+              alt="left top"
+              className="transition-transform duration-300 md:group-hover:-translate-y-3 group-hover:-translate-y-5 "
+            />
+            <span className="absolute opacity-0 transition-opacity duration-300 text-[14px] md:text-xl drop-shadow-[0_0_3px_#A855F7]  text-white group-hover:opacity-100">
+              Swipe Left
+            </span>
+            <img
+              src={leftbtm}
+              alt="left bottom"
+              className="transition-transform duration-300 md:group-hover:translate-y-3 group-hover:translate-y-5"
+            />
+          </div>
         </button>
 
         <button
-          className="absolute right-4 z-20 p-3 bg-white/10 hover:bg-white/20 rounded-full"
+          className="arrow-button right absolute right-[-10px] md:right-[50px] z-20 p-3 rounded-full overflow-hidden group"
           onClick={() => paginate(1)}
         >
-          {/* Right Arrow Icon */}
+          <div className="relative flex flex-col items-center justify-center w-[50px] md:w-[110px] h-24">
+            <img
+              src={righttop}
+              alt="right top"
+              className="transition-transform duration-300 group-hover:-translate-y-5 md:group-hover:-translate-y-3"
+            />
+            <span className="absolute opacity-0 transition-opacity duration-300 md:text-xl drop-shadow-[0_0_3px_#A855F7] text-[14px] text-white group-hover:opacity-100">
+              Swipe Right
+            </span>
+            <img
+              src={rightbtm}
+              alt="right bottom"
+              className="transition-transform duration-300 group-hover:translate-y-5 md:group-hover:translate-y-3"
+            />
+          </div>
         </button>
 
         {/* Cards */}
@@ -112,9 +145,7 @@ export default function StyledCarousel() {
                         window.innerWidth >= 768 ? "300px" : "150px"
                       })`
                     : isLeft
-                    ? `calc(-20% - ${
-                        window.innerWidth >= 768 ? "0px" : "0px"
-                      })`
+                    ? `calc(-20% - ${window.innerWidth >= 768 ? "0px" : "0px"})`
                     : isRight
                     ? `calc(80% - 0px)`
                     : "100%",
