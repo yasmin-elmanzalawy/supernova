@@ -100,7 +100,7 @@ export default function StyledCarousel() {
             return (
               <motion.div
                 key={service.id}
-                className={`absolute w-[300px] md:w-[800px]  h-full rounded-2xl transition-all duration-300 bg-cover bg-center overflow-hidden ${
+                className={`absolute w-[300px] md:w-[600px]  h-full rounded-2xl transition-all duration-300 bg-cover bg-center overflow-hidden ${
                   isActive
                     ? "scale-100 border-[4px] border-purple-500 z-10"
                     : "scale-90 opacity-30 z-0"
@@ -108,22 +108,17 @@ export default function StyledCarousel() {
                 style={{
                   backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url(${service.image})`,
                   left: isActive
-                    ? "calc(50% - 150px)" // Center the active card
+                    ? `calc(50% - ${
+                        window.innerWidth >= 768 ? "300px" : "150px"
+                      })`
                     : isLeft
-                    ? "calc(-20% - 0px)" // Left card partially visible
+                    ? `calc(-20% - ${
+                        window.innerWidth >= 768 ? "0px" : "0px"
+                      })`
                     : isRight
-                    ? "calc(80% - 0px)" // Right card partially visible
+                    ? `calc(80% - 0px)`
                     : "100%",
                   transition: "left 0.3s ease-in-out",
-                  "@media (max-width: 768px)": {
-                    left: isActive
-                      ? "calc(50% - 400px)" // Center the active card on tablets/laptops
-                      : isLeft
-                      ? "calc(-15% - 0px)" // Left card partially visible on tablets/laptops
-                      : isRight
-                      ? "calc(65% - 0px)" // Right card partially visible on tablets/laptops
-                      : "100%",
-                  },
                 }}
                 drag="x"
                 dragConstraints={{ left: 0, right: 0 }}
