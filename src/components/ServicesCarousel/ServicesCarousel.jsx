@@ -4,39 +4,44 @@ import lefttop from "../../assets/lefttop.png";
 import leftbtm from "../../assets/leftbtm.png";
 import righttop from "../../assets/righttop.png";
 import rightbtm from "../../assets/rightbtm.png";
+import gcmbg from "../../assets/gcmbg.jpeg";
+import gsmbg from "../../assets/gsmbg.jpeg";
+import assetcreationbg from "../../assets/assetcreationbg.png";
+import managingbg from "../../assets/managingbg.jpeg";
+import hostingbg from "../../assets/hostingbg.jpeg";
 
 const services = [
   {
     id: 1,
-    title: "VIDEO EDITING",
-    description: "STUNNING DESIGN FOR GAMING CONTENT",
-    image: "/bg-1.jpg",
+    title: "GAMING COMMUNITY MANAGEMENT",
+    description: "SEAMLESS SETUP, EFFICIENT MANAGEMENT, AND VALUABLE CONSULTATION FOR GAMING COMMUNITIES, AND DISCORD SERVERS",
+    image: gcmbg ,
   },
   {
     id: 2,
-    title: "GAMING SOCIAL MEDIA MANAGEMENT",
+    title: "ASSETS CREATION - VIDEO EDITING",
     description:
-      "SKILLFUL TEAM FOR CLIENT SOCIAL MEDIA PLATFORMS WITH A DEDICATED FOCUS ON GAMING CONTENT",
-    image: "/bg-2.jpg",
+      "INNOVATIVE AND CAPTIVATING DESIGN FOR GAMING ASSETS",
+    image: gsmbg,
   },
   {
     id: 3,
-    title: "TOURNAMENT MANAGEMENT",
+    title: "GAMING SOCIAL MEDIA MANAGEMENT",
     description:
-      "EXPERT MANAGEMENT OF GAMING TOURNAMENTS WITH 5+ YEARS OF EXPERIENCE",
-    image: "/bg-3.jpg",
+      "SKILLFUL TEAM FOR CLIENT SOCIAL MEDIA PLATFORMS WITH A DEDICATED FOCUS ON GAMING CONTENT",
+    image: managingbg,
   },
   {
     id: 4,
-    title: "GAMING WEBSITE DESIGN",
-    description: "CREATIVE AND ENGAGING WEBSITES FOR GAMING COMMUNITIES",
-    image: "/bg-4.jpg",
+    title: "TOURNAMENT OPERATION/HOSTING",
+    description: "EXPERT MANAGEMENT AND EXECUTION OF GAMING TOURNAMENTS AND EVENTS WITH 5+ YEARS OF EXPERIENCE",
+    image: hostingbg,
   },
   {
     id: 5,
-    title: "GAME STREAMING SERVICES",
-    description: "PROFESSIONAL STREAMING SETUP FOR GAME CONTENT CREATORS",
-    image: "/bg-5.jpg",
+    title: "CONTENT CREATION, VOICE OVER AND SCRIPT WRITING",
+    description: "HIGH QUALITY CREATION OF GAMING CONTENT, INCLUDING ENGAGING VOICE OVERS AND WELL CRAFTED SCRIPTS.",
+    image: assetcreationbg,
   },
 ];
 
