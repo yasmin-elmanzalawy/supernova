@@ -7,6 +7,8 @@ import rightArrow from "../../assets/rightarrow.png";
 import homeSec2 from "../../assets/home-sec2.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import ClientCarousel from "../ClientCarousel/ClientCarousel";
+import TeamMembers from "../TeamMembers/TeamMembers";
 
 
 export default function Home() {
@@ -80,24 +82,25 @@ export default function Home() {
       </div>
       {/* our services section */}
       <div className="bg-[#1F1F1F] p-5">
-        <h3 className="text-5xl font-bold text-white text-center">
+        <h3 className="md:text-5xl text-4xl pt-5 font-bold text-white text-center">
           Our services
         </h3>
        <ServicesCarousel />
       </div>
       {/* our clients section */}
       <div className="bg-[#101010] p-5">
-        <h3 className="text-5xl font-bold text-white text-center">
+        <h3 className="md:text-5xl text-4xl pt-5 font-bold text-white text-center">
           Our Clients
         </h3>
+        {/* <ClientCarousel></ClientCarousel> */}
 
       </div>
       {/* our teams section */}
       <div className="bg-[#101010] p-5">
-        <h3 className="text-5xl font-bold text-white text-center">
+        <h3 className="md:text-5xl text-4xl py-5 font-bold text-white text-center">
           Our Team
         </h3>
-
+ <TeamMembers></TeamMembers>
       </div>
     </div>
   );

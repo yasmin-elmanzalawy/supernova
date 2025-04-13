@@ -1,0 +1,25 @@
+.carousel-container {
+  overflow: hidden;
+  width: 100%; /* Adjust this width as needed */
+}
+
+.carousel-wrapper {
+  display: flex;
+  margin: 100px 0;
+  animation: scroll 20s linear infinite;
+}
+
+.carousel-image {
+  max-width: 300px;
+  height: auto;
+  flex-shrink: 0; /* Prevent images from shrinking */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Move to the left */
+  }
+}
