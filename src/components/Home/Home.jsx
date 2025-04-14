@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
-import ServicesCarousel from '../ServicesCarousel/ServicesCarousel'
+import ServicesCarousel from "../ServicesCarousel/ServicesCarousel";
 import heroBg from "../../assets/herobg.jpg";
 import leftArrow from "../../assets/leftarrow.png";
 import rightArrow from "../../assets/rightarrow.png";
@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ClientCarousel from "../ClientCarousel/ClientCarousel";
 import TeamMembers from "../TeamMembers/TeamMembers";
-
 
 export default function Home() {
   const [hovered, setHovered] = useState(false);
@@ -67,17 +66,23 @@ export default function Home() {
       {/* second container */}
       <div className="bg-[radial-gradient(ellipse_at_center,_#9545FF,_#592999)] flex flex-col md:flex-row">
         <div className="md:w-[50%] flex flex-col justify-center text-white p-8 ">
-          <h3 className="text-5xl font-bold pb-12">Discipline. Innovation. Altruism.</h3>
+          <h3 className="text-5xl font-bold pb-12">
+            Discipline. Innovation. Altruism.
+          </h3>
           <p className="text-2xl pb-8">
             We tailor our services to meet each client's needs, helping them
             grow and achieve their goals within their budget. We prioritize
             innovation, collaboration, quality, expertise and integrity,
             ensuring top-quality solutions that elevate the gaming experience
           </p>
-            <Link  to="/about">                        
-          <button className=" self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">About us</button></Link>
+          <Link to="/about">
+            <button className=" self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
+              About us
+            </button>
+          </Link>
         </div>
-        <div className="md:w-[50%]"><img className="block w-[100%]" src={homeSec2} alt="Gaming Arena" />
+        <div className="md:w-[50%]">
+          <img className="block w-[100%]" src={homeSec2} alt="Gaming Arena" />
         </div>
       </div>
       {/* our services section */}
@@ -85,7 +90,7 @@ export default function Home() {
         <h3 className="md:text-5xl text-4xl pt-5 font-bold text-white text-center">
           Our services
         </h3>
-       <ServicesCarousel />
+        <ServicesCarousel />
       </div>
       {/* our clients section */}
       <div className="bg-[#101010] p-5">
@@ -93,14 +98,21 @@ export default function Home() {
           Our Clients
         </h3>
         {/* <ClientCarousel></ClientCarousel>++ */}
-
       </div>
       {/* our teams section */}
       <div className="bg-[linear-gradient(to_bottom,_#101010_0%,_#101010_70%,_#8000FF_100%)]  py-14">
-        <h3 className="md:text-5xl text-4xl py-12 font-bold text-white text-center ">
+        <h3 className="md:text-5xl text-4xl py-4 font-bold text-white text-center ">
           Our Team
         </h3>
- <TeamMembers></TeamMembers>
+        <TeamMembers></TeamMembers>
+        <Link to="#">
+          {" "}
+          <div className="flex justify-center my-14">
+            <button className="inline-block text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
+              Know More
+            </button>
+          </div>
+        </Link>
       </div>
     </div>
   );
