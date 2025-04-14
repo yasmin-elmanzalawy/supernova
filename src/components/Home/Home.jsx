@@ -92,12 +92,12 @@ export default function Home() {
         <h3 className="md:text-5xl text-4xl pt-5 font-bold text-white text-center">
           Our Clients
         </h3>
-        {/* <ClientCarousel></ClientCarousel> */}
+        {/* <ClientCarousel></ClientCarousel>++ */}
 
       </div>
       {/* our teams section */}
-      <div className="bg-[#101010] p-5">
-        <h3 className="md:text-5xl text-4xl py-5 font-bold text-white text-center">
+      <div className="bg-[linear-gradient(to_bottom,_#101010_0%,_#101010_70%,_#8000FF_100%)]  py-14">
+        <h3 className="md:text-5xl text-4xl py-12 font-bold text-white text-center ">
           Our Team
         </h3>
  <TeamMembers></TeamMembers>
