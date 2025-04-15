@@ -93,30 +93,35 @@ export default function Services() {
         </div>
       </div>
 
-      {/* Service Cards */}
+      {/* Service Cards Section */}
       <div
         style={{ backgroundImage: `url(${blobs})` }}
-        className="bg-[#000000] flex flex-wrap justify-center items-center gap-8 py-12 relative"
+        className="bg-[#000000] bg-cover relative py-12"
       >
-        <div className=" absolute bottom-0 left-0 right-0">
+        {/* Bottom purple lines */}
+        <div className="absolute bottom-0 left-0 right-0">
           <img className="w-full" src={union} alt="purple background lines" />
         </div>
 
-        {serviceCards.map((card, index) => (
-          <div
-            key={index}
-            style={{ backgroundImage: `url(${card.bg})` }}
-            className="m-8 relative bg-cover w-[300px] md:w-[600px] h-[400px] flex justify-center items-center flex-col rounded-xl overflow-hidden shadow-[0_10px_20px_#C084FC] border-b-[#C084FC] border-r-[#C084FC] border-l-[#C084FC] border-b-4 border-l-2 border-r-2"
-          >
-            <div className="absolute inset-0 bg-black opacity-70"></div>
-            <div className="z-3 relative p-5 text-center">
-              <h3 className="py-5 text-2xl font-bold text-[#C084FC]">
-                {card.title}
-              </h3>
-              <p className="text-white text-lg">{card.description}</p>
+        {/* Flex container */}
+        <div className="flex flex-wrap justify-center items-center gap-10 z-10 relative px-4 max-w-6xl mx-auto">
+          {serviceCards.map((card, index) => (
+            <div
+              key={index}
+              style={{ backgroundImage: `url(${card.bg})` }}
+              className="relative bg-cover flex justify-center items-center flex-col rounded-xl overflow-hidden shadow-[0_10px_20px_#C084FC] border-b-[#C084FC] border-r-[#C084FC] border-l-[#C084FC] border-b-4 border-l-2 border-r-2
+              w-[300px] md:w-[45%] h-[400px] m-3"
+            >
+              <div className="absolute inset-0 bg-black opacity-70"></div>
+              <div className="z-3 relative p-5 text-center">
+                <h3 className="py-5 text-2xl font-bold text-[#C084FC]">
+                  {card.title}
+                </h3>
+                <p className="text-white text-lg">{card.description}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
