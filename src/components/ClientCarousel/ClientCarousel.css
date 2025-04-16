@@ -1,25 +1,14 @@
-.carousel-container {
-  overflow: hidden;
-  width: 100%; /* Adjust this width as needed */
-}
-
+/* ClientCarousel.css */
 .carousel-wrapper {
-  display: flex;
-  margin: 100px 0;
-  animation: scroll 20s linear infinite;
+  
+  width: 100%;
+  padding:0;
 }
 
-.carousel-image {
-  max-width: 300px;
+.carousel-item img {
+  padding: 50px;
+  align-self: center;
+  width: 100%;
   height: auto;
-  flex-shrink: 0; /* Prevent images from shrinking */
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%); /* Move to the left */
-  }
+  object-fit: contain;
 }
