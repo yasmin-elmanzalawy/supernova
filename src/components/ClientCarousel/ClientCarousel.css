@@ -1,14 +1,33 @@
-/* ClientCarousel.css */
 .carousel-wrapper {
-  
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  scroll-behavior: auto;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
   width: 100%;
-  padding:0;
+}
+
+.carousel-wrapper.grabbing {
+  cursor: grabbing;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  padding: 50px;
 }
 
 .carousel-item img {
-  padding: 50px;
-  align-self: center;
-  width: 100%;
-  height: auto;
+  height: 80px;
   object-fit: contain;
+}
+
+/* Hide scrollbar */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
