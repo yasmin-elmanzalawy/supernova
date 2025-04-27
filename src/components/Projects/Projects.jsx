@@ -6,21 +6,20 @@ import Navbar from '../Navbar/Navbar';
 
 export default function Projects() {
   return (
-    <div  style={{ backgroundImage: `url(${blobs})` }}
-        className="relative top-0 bg-[#000000] bg-cover bg-center ">
-      <Navbar />
-      {/* Navbar at the top, no extra space */}
+    <div className="relative bg-[#000000] min-h-screen">
+      <Navbar /> 
+      {/* Navbar at the top */}
 
       {/* Background container */}
       <div
         style={{ backgroundImage: `url(${blobs})` }}
-        className=" py-12 min-h-screen flex flex-col md:flex-row items-center justify-center  overflow-hidden"
+        className="py-12 flex flex-col md:flex-row items-center justify-center bg-cover bg-center relative overflow-hidden min-h-screen"
       >
         {/* Left Image on Desktop / Top on Mobile */}
         <img
           src={powder}
           alt="Powder"
-          className="h-[40vh] absolute md:top-0 top-[20px] left-[10px] object-contain md:h-[80vh] md:object-contain"
+          className="h-[40vh] absolute md:top-1/2 md:translate-y-[-50%] top-[20px] left-[10px] object-contain md:h-[80vh]"
         />
 
         {/* Center Text */}
@@ -37,7 +36,7 @@ export default function Projects() {
         <img
           src={jinx}
           alt="Jinx"
-          className="h-[40vh] right-[10px] bottom-0 md:bottom-[30px] absolute object-contain md:h-[80vh] md:object-contain"
+          className="h-[50vh] absolute right-[10px] bottom-0 md:bottom-1/2 md:translate-y-[50%] object-contain md:h-[80vh]"
         />
       </div>
     </div>

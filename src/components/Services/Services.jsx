@@ -57,7 +57,7 @@ export default function Services() {
     <div>
       {/* Hero Section */}
       <div
-        className="relative bg-cover overflow-hidden"
+        className="relative bg-cover overflow-hidden z-50"
         style={{ backgroundImage: `url(${servicesbg})` }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -77,7 +77,7 @@ export default function Services() {
           />
         ))}
 
-        <div className="z-3 relative">
+        <div className="z-50 relative">
           <Navbar />
           <h2 className="text-center text-4xl font-bold text-white py-8">
             Our services
@@ -96,7 +96,7 @@ export default function Services() {
       {/* Service Cards Section */}
       <div
         style={{ backgroundImage: `url(${blobs})` }}
-        className="bg-[#000000] bg-cover relative py-12"
+        className="bg-[#000000] bg-cover relative py-12 -z-10"
       >
         {/* Bottom purple lines */}
         <div className="absolute bottom-0 left-0 right-0">
