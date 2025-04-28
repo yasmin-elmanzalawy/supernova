@@ -3,6 +3,7 @@ import blobs from "../../assets/blobs.png";
 import bgsec from "../../assets/projectsec.png";
 import jinx from "../../assets/jinx.png";
 import powder from "../../assets/powder.png";
+import eclipse from "../../assets/eclipse.gif";
 import Navbar from "../Navbar/Navbar";
 
 export default function Projects() {
@@ -72,11 +73,14 @@ export default function Projects() {
         </div>
       </div>
       <div style={{ backgroundImage: `url(${bgsec})` }} className="bg-cover bg-center">
-        <p  className="text-center px-64 py-32 text-2xl md:text-4xl font-normal text-white mb-4"
+        <p  className="text-center md:px-64 px-12 py-32 text-2xl md:text-4xl font-normal text-white mb-4"
               style={{
                 WebkitTextStroke: "1px #5A3392", // Purple outline
                 textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", // Optional shadow for a subtle effect
               }}>Empowering Gaming Brands with Creative Content, Engaging Experiences, and Unforgettable Esports  Events.</p>
+      </div>
+      <div className="flex justify-center -mt-32">
+        <img className="block" src={eclipse} alt="eclipse" />
       </div>
     </div>
   );
