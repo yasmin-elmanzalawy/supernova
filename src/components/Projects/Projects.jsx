@@ -1,5 +1,6 @@
 import React from "react";
 import blobs from "../../assets/blobs.png";
+import bgsec from "../../assets/projectsec.png";
 import jinx from "../../assets/jinx.png";
 import powder from "../../assets/powder.png";
 import Navbar from "../Navbar/Navbar";
@@ -37,11 +38,12 @@ export default function Projects() {
             </h3>
 
             <p
-            className="text-2xl md:text-5xl font-normal text-white mb-4"
-            style={{
-              WebkitTextStroke: "1px #5A3392", // Purple outline
-              textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", // Optional shadow for a subtle effect
-              }}>
+              className="text-2xl md:text-5xl font-normal text-white mb-4"
+              style={{
+                WebkitTextStroke: "1px #5A3392", // Purple outline
+                textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", // Optional shadow for a subtle effect
+              }}
+            >
               Elevating Gaming Through Content & Esports
             </p>
           </div>
@@ -53,6 +55,28 @@ export default function Projects() {
             className="h-[50vh] md:h-[100vh]  md:d-block object-contain md:absolute md:right-10 md:bottom-1/2 md:translate-y-[40%] bottom-0 right-5"
           />
         </div>
+      </div>
+      <div className=" my-32">
+        {/* projects section */}
+        <div className="flex flex-wrap gap-5 justify-around">
+          <div className="flex-col flex justify-around items-center rounded-lg border-4 border-[#824FEF] text-white text-center w-[90vw] md:w-[40vw] h-[50vh] p-12 ">
+            <h3 className="text-4xl">356Games.net</h3>
+            <p className="text-2xl">
+              365Games – Bringing Gaming to Life Through Engaging Content
+            </p>
+          </div>
+          <div className="flex-col flex justify-around items-center rounded-lg border-4 border-[#824FEF] text-white text-center w-[90vw] md:w-[40vw] h-[50vh] p-12 ">
+            <h3 className="text-4xl">Arena PUBG Cup</h3>
+            <p className="text-2xl">Bringing the Community Together</p>
+          </div>
+        </div>
+      </div>
+      <div style={{ backgroundImage: `url(${bgsec})` }} className="bg-cover bg-center">
+        <p  className="text-center px-64 py-32 text-2xl md:text-4xl font-normal text-white mb-4"
+              style={{
+                WebkitTextStroke: "1px #5A3392", // Purple outline
+                textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", // Optional shadow for a subtle effect
+              }}>Empowering Gaming Brands with Creative Content, Engaging Experiences, and Unforgettable Esports  Events.</p>
       </div>
     </div>
   );
