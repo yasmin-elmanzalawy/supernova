@@ -15,7 +15,7 @@ export default function Projects() {
         className="bg-cover bg-center min-h-screen flex flex-col"
       >
         {/* Navbar normally positioned at the top */}
-        <Navbar />
+       <div className="z-50"><Navbar /></div> 
 
         {/* Main Content */}
         <div className="flex-1 flex flex-col md:flex-row items-center justify-center relative ">
