@@ -148,6 +148,7 @@ export default function About() {
              <span className="text-white">Parallel</span> Universe <span className="text-white">for</span> Gamers
             </h3>
             <p className="text-xl md:text-3xl text-gray-300">
+            
             SuperNova Gaming (SNG) is a fully remote gaming organization—not just an Esports  organization, but a vibrant gaming community fueled by passion and dedication.  Established
 in 2019, we have been on a mission to elevate 
 the gaming experience,  empower Esports talents, and foster a sense of togetherness among gaming  enthusiasts.
@@ -229,6 +230,7 @@ the gaming experience,  empower Esports talents, and foster a sense of togethern
      <div className="py-24">
       <Moon></Moon>
      </div>
+     
     </div>
   );
 }
