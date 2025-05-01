@@ -53,7 +53,7 @@ export default function Moon() {
               </p>
             </div>
 
-            <div className="bg-[rgba(0,0,0,0.5)] text-white border-s border-b rounded-xl px-4 py-12 my-5 md:w-[33%]  md:m-6  border-[#5b3392c9] relative">
+            <div className="bg-[rgba(0,0,0,0.5)] text-white border-s border-b rounded-xl px-4 py-12 my-5 md:w-[33%]  md:m-6  border-[#5b3392c9] relative z-50">
               <p className="text-7xl font-extrabold text-start absolute top-[-50px] bg-gradient-to-b from-purple-500 to-black bg-clip-text text-transparent">
                 2
               </p>
