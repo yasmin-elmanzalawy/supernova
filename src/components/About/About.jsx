@@ -8,6 +8,12 @@ import swap1 from "../../assets/swap1.png";
 import swap2 from "../../assets/swap2.png";
 import swap3 from "../../assets/swap3.png";
 import union from "../../assets/Union.png";
+import delivery from "../../assets/delivery.png";
+import friendship from "../../assets/friendship.png";
+import quality from "../../assets/quality.png";
+import innovation from "../../assets/innovation.png";
+import puzzle from "../../assets/puzzle.png";
+import stars from "../../assets/stars.png";
 import "./About.css";
 import Moon from "../Moon/Moon";
 
@@ -69,7 +75,7 @@ function DiagonalSwiper() {
       y: -120,
       zIndex: 10,
       scale: 0.7,
-      opacity: 0.6,
+      opacity: 0.5,
     },
     center: {
       x: 0,
@@ -83,7 +89,7 @@ function DiagonalSwiper() {
       y: 120,
       zIndex: 20,
       scale: 0.7,
-      opacity: 0.6,
+      opacity: 0.5,
     },
   };
 
@@ -132,15 +138,14 @@ function DiagonalSwiper() {
 
 export default function About() {
   return (
-    <div className="relative bg-[#000000]  overflow-hidden">
+    <div className="bg-[#000000]  overflow-hidden">
       <div
         style={{ backgroundImage: `url(${blobs})` }}
-        className="bg-cover  flex flex-col"
+        className="bg-cover flex flex-col"
       >
         <div className="z-50">
           <Navbar />
         </div>
-
         {/* Main Content */}
         <div className="relative z-10 flex flex-col gap-5 md:flex-row min-h-screen items-center justify-center md:-mt-24 px-8 text-white">
           {/* Left */}
@@ -205,7 +210,6 @@ export default function About() {
             </div>
           </div>
         </div>
-
         {/* Second Section */}
         <div className="text-white relative z-10 flex flex-col gap-5 md:flex-row min-h-screen items-center justify-center md:-my-24 my-24 px-8">
           <div className="md:w-1/2">
@@ -234,15 +238,69 @@ export default function About() {
             <div className="translate-x-[20%] translate-y-[35%] relative ">
               <DiagonalSwiper />
             </div>
+            <img
+            src={stars}
+            className="absolute bottom-0 left-0 right-0 -z-40"
+            alt="union"
+          />
           </div>
           <img
             src={union}
             className="absolute bottom-0 left-0 right-0 -z-40"
             alt="union"
           />
+          
         </div>
         <div className="py-16">
           <Moon></Moon>
+        </div>
+        <div className="mb-32">
+          <div className="m-5 flex">
+            <h3 className="text-white text-3xl md:text-4xl p-4 border-b-2 border-s-2 rounded-xl border-[#5A3392] ">
+              Competitive Edge
+            </h3>
+          </div>
+          <div className="flex gap-5 m-12 md:flex-nowrap flex-wrap">
+            <div className="text-white bg-gradient-to-b w-full text-center from-[#5A3392] to-[#272731] p-4 rounded-lg flex flex-col justify-center align-items items-center">
+              <img src={delivery} alt="clock" />
+              <h3>Accuracy in delivery time</h3>
+              <p>
+                Your Army will always deliver the required job in the required
+                time!
+              </p>
+            </div>
+            <div className="text-white bg-gradient-to-b w-full text-center from-[#C243FE] to-[#5A3392] p-4 rounded-lg flex flex-col justify-center align-items items-center md:mt-[60px] md:mb-[-60px] ">
+              <img src={friendship} alt="handshake" />
+              <h3>Friendship over cost</h3>
+              <p>
+                Even with High-quality host you still gets a competitive price
+                the suits your budget!
+              </p>
+            </div>
+            <div className="text-white bg-gradient-to-b w-full text-center from-[#5A3392] to-[#272731] p-4 rounded-lg flex flex-col justify-center align-items items-center md:mt-[120px] md:mb-[-120px]">
+              <img src={quality} alt="quality" />
+              <h3>Constant quality delivered</h3>
+              <p>
+                With our experienced team we always deliver the best constant
+                quality by not relying on Freelancers.
+              </p>
+            </div>
+            <div className="text-white bg-gradient-to-b w-full text-center from-[#C243FE] to-[#5A3392] p-4 rounded-lg flex flex-col justify-center align-items items-center  md:mt-[60px] md:mb-[-60px]">
+              <img src={innovation} alt="lamp" />
+              <h3>Innovative team</h3>
+              <p>
+                Our team deliver new ideas everyday to reach wider audience!
+              </p>
+            </div>
+            <div className="text-white bg-gradient-to-b w-full text-center from-[#5A3392] to-[#272731] p-4 rounded-lg flex flex-col justify-center align-items items-center">
+              <img src={puzzle} alt="puzzle" />
+              <h3>Customized solution</h3>
+              <p>
+                Each client has his own needs and our duty is to understand
+                clients needs and fulfill it!
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
