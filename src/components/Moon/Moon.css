@@ -1,18 +1,17 @@
 
 .orbit-container {
     position: relative;
-    /* width: 600px;
-    height: 600px; */
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid transparent; /* For debugging */
+    border: 1px solid transparent; 
 }
 
 .orbit {
     position: absolute;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid #cba5ff53;
     border-radius: 50%;
+    background-color: rgba(137, 43, 226, 0.108);
     animation: rotateOrbits 10s infinite linear;
 }
 
@@ -35,6 +34,7 @@
 .orbit-3 img{
     width: 30%;
 }
+
 .orbit-4 {
     width: 100%;
     height: 100%;
@@ -45,12 +45,12 @@
 
 .text-box {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.618);
+    border:0.7px solid #5b3392c9;
     padding: 10px;
     border-radius: 5px;
     font-family: Arial, sans-serif;
     text-align: center;
-    width: 200px;
 }
 
 @keyframes rotateOrbits {

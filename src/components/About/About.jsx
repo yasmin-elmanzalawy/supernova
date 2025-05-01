@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useSwipeable } from "react-swipeable";  // Importing the swipeable hook
+import { useSwipeable } from "react-swipeable"; // Importing the swipeable hook
 import blobs from "../../assets/blobs.png";
 import Navbar from "../Navbar/Navbar";
 import logo from "../../assets/aboutlogo.png";
@@ -95,7 +95,8 @@ function DiagonalSwiper() {
   // Swipeable handlers
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => setCenterIndex((prev) => (prev + 1) % images.length),
-    onSwipedRight: () => setCenterIndex((prev) => (prev - 1 + images.length) % images.length),
+    onSwipedRight: () =>
+      setCenterIndex((prev) => (prev - 1 + images.length) % images.length),
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
   });
@@ -131,10 +132,10 @@ function DiagonalSwiper() {
 
 export default function About() {
   return (
-    <div className="relative bg-[#000000] min-h-screen overflow-hidden">
+    <div className="relative bg-[#000000]  overflow-hidden">
       <div
         style={{ backgroundImage: `url(${blobs})` }}
-        className="bg-cover bg-center min-h-screen flex flex-col"
+        className="bg-cover  flex flex-col"
       >
         <div className="z-50">
           <Navbar />
@@ -145,13 +146,16 @@ export default function About() {
           {/* Left */}
           <div className="md:w-1/2 mb-12 md:mb-0 md:p-12 p-4">
             <h3 className="text-2xl md:text-4xl font-bold mb-4 uppercase text-purple-400">
-             <span className="text-white">Parallel</span> Universe <span className="text-white">for</span> Gamers
+              <span className="text-white">Parallel</span> Universe{" "}
+              <span className="text-white">for</span> Gamers
             </h3>
             <p className="text-xl md:text-3xl text-gray-300">
-            
-            SuperNova Gaming (SNG) is a fully remote gaming organization—not just an Esports  organization, but a vibrant gaming community fueled by passion and dedication.  Established
-in 2019, we have been on a mission to elevate 
-the gaming experience,  empower Esports talents, and foster a sense of togetherness among gaming  enthusiasts.
+              SuperNova Gaming (SNG) is a fully remote gaming organization—not
+              just an Esports organization, but a vibrant gaming community
+              fueled by passion and dedication. Established in 2019, we have
+              been on a mission to elevate the gaming experience, empower
+              Esports talents, and foster a sense of togetherness among gaming
+              enthusiasts.
             </p>
           </div>
 
@@ -208,29 +212,39 @@ the gaming experience,  empower Esports talents, and foster a sense of togethern
             <div className="mb-8 ">
               <h3 className="text-3xl md:text-5xl py-4">Our Mission</h3>
               <p className="text-xl md:text-3xl font-light">
-              To revolutionize gaming experiences globally By providing high-quality, innovative solutions  that cater to the unique needs of our clients. From tournament management to content  creation and beyond.
+                To revolutionize gaming experiences globally By providing
+                high-quality, innovative solutions that cater to the unique
+                needs of our clients. From tournament management to content
+                creation and beyond.
               </p>
             </div>
             <div>
               <h3 className="text-3xl md:text-5xl py-4">Our Vision</h3>
               <p className="text-xl md:text-3xl font-light">
-              To support organizations in enhancing tournament management, simplifying workflows, and  boosting media and content creation. We believe in collaboration to elevate and advance the  gaming community.
+                To support organizations in enhancing tournament management,
+                simplifying workflows, and boosting media and content creation.
+                We believe in collaboration to elevate and advance the gaming
+                community.
               </p>
             </div>
           </div>
 
           {/* Swiper */}
           <div className="flex justify-center items-center my-5 py-5 md:w-1/2 relative   ">
-           
-           <div className="translate-x-[20%] translate-y-[35%] relative "><DiagonalSwiper /></div> 
+            <div className="translate-x-[20%] translate-y-[35%] relative ">
+              <DiagonalSwiper />
+            </div>
           </div>
-           <img src={union} className="absolute bottom-0 left-0 right-0 -z-40" alt="union" />
+          <img
+            src={union}
+            className="absolute bottom-0 left-0 right-0 -z-40"
+            alt="union"
+          />
+        </div>
+        <div className="py-16">
+          <Moon></Moon>
         </div>
       </div>
-     <div className="py-24">
-      <Moon></Moon>
-     </div>
-     
     </div>
   );
 }
