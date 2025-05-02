@@ -4,12 +4,28 @@
 }
 
 .slick-slide {
-  display: flex;
-  justify-content: center; /* Center the logos inside the slides */
+  display: inline-block; /* Display images as inline blocks */
+  padding: 10px;
+  text-align: center; /* Center images horizontally */
 }
 
 .carousel-img {
-  width: 120px;  /* Adjust image width as needed */
+  width: 120px;  /* Adjust the width of the logos */
   height: auto;
   object-fit: contain;  /* Ensures logos maintain their aspect ratio */
+}
+
+/* Make sure to center logos when the screen is small */
+@media (max-width: 600px) {
+  .carousel-img {
+    width: 80px; /* Adjust logo size for smaller screens */
+  }
+  .slick-center .carousel-img {
+    transform: scale(1.1); /* Slightly scale up the centered logo for emphasis */
+  }
+}
+
+/* Optional: Add a smoother transition for the scaling effect on small screens */
+.slick-center {
+  transition: transform 0.3s ease;
 }
