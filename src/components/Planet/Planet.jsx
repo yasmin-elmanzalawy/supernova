@@ -30,12 +30,12 @@ export default function Moon() {
 
         <div className="orbit orbit-1"></div>
         <div className="orbit orbit-2">
-          <img src={planet} />
+          <img className="md:mt-[-40px] mt-[-15px]" src={planet} />
         </div>
         <div className="orbit orbit-3"></div>
         <div className="orbit orbit-4"></div>
         <div className="planet"></div>
-        <div className=" bg-[rgba(0,0,0,0.5)] border border-[#5b3392c9] rounded-xl relative z-50 mt-24 md:mt-0">
+        <div className=" bg-[rgba(0,0,0,0.5)] border border-[#5b3392c9] rounded-xl mx-8 md:mx-0 relative z-50 mt-24 md:mt-0">
           <div className="p-12">
             <div className="flex gap-5 flex-wrap md:flex-nowrap">
             <div className="m-5">
