@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 import ServicesCarousel from "../ServicesCarousel/ServicesCarousel";
 import heroBg from "../../assets/herobg.jpg";
 import leftArrow from "../../assets/leftarrow.png";
@@ -114,6 +115,7 @@ export default function Home() {
           </div>
         </Link>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import powder from "../../assets/powder.png";
 import eclipse from "../../assets/eclipse.gif";
 import rings from "../../assets/rings.png";
 import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 export default function Projects() {
   return (
@@ -61,13 +62,13 @@ export default function Projects() {
       <div className=" my-32">
         {/* projects section */}
         <div className="flex flex-wrap gap-5 justify-around">
-          <div className="flex-col flex justify-around items-center rounded-lg border-4 border-[#824FEF] text-white text-center w-[90vw] md:w-[40vw] h-[50vh] p-12 ">
+          <div className="flex-col flex justify-around items-center rounded-lg border-4 border-[#7c009b59] text-white text-center w-[90vw] md:w-[40vw] h-[50vh] p-12 ">
             <h3 className="text-4xl">356Games.net</h3>
             <p className="text-2xl">
               365Games – Bringing Gaming to Life Through Engaging Content
             </p>
           </div>
-          <div className="flex-col flex justify-around items-center rounded-lg border-4 border-[#824FEF] text-white text-center w-[90vw] md:w-[40vw] h-[50vh] p-12 ">
+          <div className="flex-col flex justify-around items-center rounded-lg border-4 border-[#7c009b59] text-white text-center w-[90vw] md:w-[40vw] h-[50vh] p-12 ">
             <h3 className="text-4xl">Arena PUBG Cup</h3>
             <p className="text-2xl">Bringing the Community Together</p>
           </div>
@@ -85,6 +86,7 @@ export default function Projects() {
         <img className="block" src={eclipse} alt="eclipse" />
         <img className="block absolute -z-10" src={rings} alt="eclipse" />
       </div>
+      <Footer></Footer>
     </div>
   );
 }

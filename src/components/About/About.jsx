@@ -16,6 +16,7 @@ import puzzle from "../../assets/puzzle.png";
 import stars from "../../assets/stars.png";
 import "./About.css";
 import Moon from "../Moon/Moon";
+import Footer from "../Footer/Footer";
 
 // Counter logic
 function Counter({ endValue, duration, suffix }) {
@@ -303,6 +304,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import blobs from "../../assets/blobs.png";
 import ClientCarousel from "../ClientCarousel/ClientCarousel";
 import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 import Planet from "../Planet/Planet";
 
 
@@ -33,6 +34,7 @@ export default function Client() {
           <div><Planet></Planet></div>
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

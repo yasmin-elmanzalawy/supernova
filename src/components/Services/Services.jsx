@@ -11,6 +11,7 @@ import managingbg from "../../assets/managingbg.jpeg";
 import hostingbg from "../../assets/hostingbg.jpeg";
 import blobs from "../../assets/blobs.png";
 import union from "../../assets/Union.png";
+import Footer from "../Footer/Footer";
 
 export default function Services() {
   // Generate 10 random stars
@@ -123,6 +124,7 @@ export default function Services() {
           ))}
         </div>
       </div>
+      <Footer></Footer>
     </div>
   );
 }

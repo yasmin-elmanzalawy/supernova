@@ -1,6 +1,5 @@
 import React from "react";
 import planet from "../../assets/planet.png";
-import charmoon from "../../assets/charmoon.png";
 import "./Planet.css";
 import star from "../../assets/semiministar.png";
 
@@ -30,12 +29,12 @@ export default function Moon() {
 
         <div className="orbit orbit-1"></div>
         <div className="orbit orbit-2">
-          <img className="md:mt-[-40px] mt-[-15px]" src={planet} />
+          <img className="md:mt-[-40px] mt-[-10px]" src={planet} />
         </div>
         <div className="orbit orbit-3"></div>
         <div className="orbit orbit-4"></div>
         <div className="planet"></div>
-        <div className=" bg-[rgba(0,0,0,0.5)] border border-[#5b3392c9] rounded-xl mx-8 md:mx-0 relative z-50 mt-24 md:mt-0">
+        <div className=" bg-[rgba(0,0,0,0.5)] border-4 border-[#7c009b59] rounded-xl mx-8 md:mx-0 relative z-50 mt-24 md:mt-0">
           <div className="p-12">
             <div className="flex gap-5 flex-wrap md:flex-nowrap">
             <div className="m-5">
@@ -92,9 +91,6 @@ export default function Moon() {
               </button>
             </div>
           </div>
-          {/* <div className="absolute left-[-70px] md:bottom-[1px]">
-              <img className="block" src={charmoon} alt="" />
-            </div> */}
         </div>
       </div>
     </div>
