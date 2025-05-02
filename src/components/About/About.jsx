@@ -138,7 +138,7 @@ function DiagonalSwiper() {
 
 export default function About() {
   return (
-    <div className="bg-[#000000]  overflow-hidden">
+    <div className="bg-[#000000] overflow-hidden">
       <div
         style={{ backgroundImage: `url(${blobs})` }}
         className="bg-cover flex flex-col"
