@@ -15,8 +15,9 @@ export default function ClientCarousel() {
   const settings = {
     infinite: true, // Infinite loop
     slidesToShow: 5, // Number of images visible at once
+    slidesToScroll: 1,
     autoplay: true, // Enable auto-scroll
-    autoplaySpeed: 1000, // Speed of auto-scroll (in ms)
+    autoplaySpeed: 2000, // Speed of auto-scroll (in ms)
     draggable: true, // Enable dragging
     speed: 1500, // Speed of transition (in ms)
     cssEase: 'ease', // Smooth transition easing
@@ -31,7 +32,7 @@ export default function ClientCarousel() {
           slidesToShow: 3, // Show 3 images on medium screens
           autoplay: true, // Ensure autoplay is enabled on medium screens
           autoplaySpeed: 2000, // Consistent autoplay speed
-          speed: 1500, // Smooth transition on medium screens
+          speed: 500, // Smooth transition on medium screens
           draggable: true, // Ensure dragging is enabled on medium screens
         },
       },
@@ -39,10 +40,10 @@ export default function ClientCarousel() {
         breakpoint: 600,
         settings: {
           slidesToShow: 2, // Show 2 images on small screens
-          draggable: true, // Ensure dragging is enabled on small screens
-          autoplay: true, // Ensure autoplay is enabled on small screens
-          autoplaySpeed: 2000, // Consistent autoplay speed on small screens
-          speed: 1500, // Smooth transition on small screens
+          draggable: true, // Enable dragging on mobile
+          autoplay: true, // Enable autoplay on mobile
+          autoplaySpeed: 200, // Consistent autoplay speed on small screens
+          speed: 1000, // Smooth transition on small screens
         },
       },
     ],
@@ -53,7 +54,7 @@ export default function ClientCarousel() {
       <Slider {...settings}>
         {images.map((img, idx) => (
           <div className="carousel-slide" key={idx}>
-            <img src={img} alt="client logo" className="carousel-img m-auto" />
+            <img src={img} alt="client logo" className="carousel-img" />
           </div>
         ))}
       </Slider>
