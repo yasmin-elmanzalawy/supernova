@@ -1,4 +1,5 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
+import Slider from 'react-slick';
 import './ClientCarousel.css';
 import gb from '../../assets/gb.png';
 import playhera from '../../assets/playhera.png';
@@ -8,77 +9,44 @@ import arena from '../../assets/arena.png';
 import esportsga from '../../assets/esportsga.png';
 import tealflamingo from '../../assets/tealflamingo.png';
 
+const images = [gb, playhera, frenzy, games, arena, esportsga, tealflamingo];
+
 export default function ClientCarousel() {
-  const logos = [gb, playhera, frenzy, games, arena, esportsga, tealflamingo];
-  const repeatedLogos = [...logos, ...logos];  // Duplicate logos to create infinite loop effect
-
-  const containerRef = useRef(null);
-  const isDragging = useRef(false);
-  const startX = useRef(0);
-  const scrollLeft = useRef(0);
-
-  const handleMouseDown = (e) => {
-    isDragging.current = true;
-    startX.current = e.pageX - containerRef.current.offsetLeft;
-    scrollLeft.current = containerRef.current.scrollLeft;
-    containerRef.current.classList.add('grabbing');
+  const settings = {
+    infinite: true, // Infinite loop
+    slidesToShow: 5, // Number of images visible at once
+    slidesToScroll: 1,
+    autoplay: true, // Auto scroll
+    autoplaySpeed: 0, // Speed of auto scroll (in ms)
+    draggable: true, // Enable dragging
+    speed: 3000, // Speed of transition (in ms)
+    arrows: false, // Remove arrows
+    cssEase: 'linear', // Smooth continuous scrolling without jarring stops
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3, // Show 3 images on medium screens
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2, // Show 1 image on small screens
+        },
+      },
+    ],
   };
-
-  const handleMouseLeave = () => {
-    isDragging.current = false;
-    containerRef.current.classList.remove('grabbing');
-  };
-
-  const handleMouseUp = () => {
-    isDragging.current = false;
-    containerRef.current.classList.remove('grabbing');
-  };
-
-  const handleMouseMove = (e) => {
-    if (!isDragging.current) return;
-    e.preventDefault();
-    const x = e.pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX.current) * 1.5; // Scroll speed multiplier
-    containerRef.current.scrollLeft = scrollLeft.current - walk;
-
-    // Check if the user reached the end or start, and teleport the scroll position
-    const scrollPosition = containerRef.current.scrollLeft;
-    const totalWidth = containerRef.current.scrollWidth / 2;
-
-    if (scrollPosition <= 0) {
-      containerRef.current.scrollLeft = totalWidth - 1;  // Jump to the end
-    } else if (scrollPosition >= totalWidth) {
-      containerRef.current.scrollLeft = 1;  // Jump to the start
-    }
-  };
-
-  useEffect(() => {
-    // If dragging is false, reset scroll to keep infinite scroll working smoothly
-    const container = containerRef.current;
-    container.addEventListener('scroll', () => {
-      if (container.scrollLeft <= 0) {
-        container.scrollLeft = container.scrollWidth / 2 - 1;
-      } else if (container.scrollLeft >= container.scrollWidth / 2) {
-        container.scrollLeft = 1;
-      }
-    });
-  }, []);
 
   return (
-    <div
-      className="carousel-wrapper no-scrollbar"
-      ref={containerRef}
-      onMouseDown={handleMouseDown}
-      onMouseLeave={handleMouseLeave}
-      onMouseUp={handleMouseUp}
-      onMouseMove={handleMouseMove}
-    >
-      {repeatedLogos.map((logo, index) => (
-        <div key={index} className="carousel-item">
-          <img src={logo} alt={`Client ${index % logos.length}`} />
-        </div>
-      ))}
+    <div className="carousel-container ">
+      <Slider {...settings}>
+        {images.map((img, idx) => (
+          <div className='flex items-center justify-center' key={idx}>
+            <img src={img} alt="client logo" className="carousel-img" />
+          </div>
+        ))}
+      </Slider>
     </div>
   );
 }
- 

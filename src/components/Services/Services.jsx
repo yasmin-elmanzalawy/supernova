@@ -57,7 +57,7 @@ export default function Services() {
     <div>
       {/* Hero Section */}
       <div
-        className="relative bg-cover overflow-hidden z-50"
+        className="relative bg-cover overflow-hidden z-50 h-[100vh]"
         style={{ backgroundImage: `url(${servicesbg})` }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -79,10 +79,10 @@ export default function Services() {
 
         <div className="z-50 relative">
           <Navbar />
-          <h2 className="text-center text-4xl font-bold text-white py-8">
+          <h2 className="text-center text-4xl font-bold mt-24 md:mt-12 text-white py-8">
             Our services
           </h2>
-          <p className="text-center text-white text-xl">
+          <p className="text-center text-white text-2xl px-5">
             Customizable Services that suit your needs
           </p>
           <img

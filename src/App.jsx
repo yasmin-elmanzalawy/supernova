@@ -10,6 +10,7 @@ import Client from './components/Client/Client'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
 
+
 function App() {
 
   return (
