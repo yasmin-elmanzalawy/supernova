@@ -15,11 +15,10 @@ export default function ClientCarousel() {
   const settings = {
     infinite: true, // Infinite loop
     slidesToShow: 5, // Number of images visible at once
-    slidesToScroll: 1,
     autoplay: true, // Enable auto-scroll
-    autoplaySpeed: 1000, // Speed of auto scroll (in ms)
+    autoplaySpeed: 1000, // Speed of auto-scroll (in ms)
     draggable: true, // Enable dragging
-    speed: 1000, // Speed of transition (in ms)
+    speed: 1500, // Speed of transition (in ms)
     cssEase: 'ease', // Smooth transition easing
     swipeToSlide: true, // Enables dragging directly to the next slide
     touchThreshold: 10, // Minimum touch distance to trigger swipe
@@ -27,12 +26,13 @@ export default function ClientCarousel() {
     centerMode: false, // Disable center mode to avoid interference with dragging
     responsive: [
       {
-        breakpoint: 600,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 3, // Show 3 images on medium screens
           autoplay: true, // Ensure autoplay is enabled on medium screens
-          autoplaySpeed: 1000, // Consistent autoplay speed
-          speed: 1000, // Smooth transition on medium screens
+          autoplaySpeed: 2000, // Consistent autoplay speed
+          speed: 1500, // Smooth transition on medium screens
+          draggable: true, // Ensure dragging is enabled on medium screens
         },
       },
       {
@@ -42,7 +42,7 @@ export default function ClientCarousel() {
           draggable: true, // Ensure dragging is enabled on small screens
           autoplay: true, // Ensure autoplay is enabled on small screens
           autoplaySpeed: 2000, // Consistent autoplay speed on small screens
-          speed: 1000, // Smooth transition on small screens
+          speed: 1500, // Smooth transition on small screens
         },
       },
     ],
