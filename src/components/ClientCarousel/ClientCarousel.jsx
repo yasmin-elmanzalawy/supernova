@@ -1,5 +1,4 @@
-import React from 'react';
-import Slider from 'react-slick';
+import React, { useRef, useEffect } from 'react';
 import './ClientCarousel.css';
 import gb from '../../assets/gb.png';
 import playhera from '../../assets/playhera.png';
@@ -12,52 +11,66 @@ import tealflamingo from '../../assets/tealflamingo.png';
 const images = [gb, playhera, frenzy, games, arena, esportsga, tealflamingo];
 
 export default function ClientCarousel() {
-  const settings = {
-    infinite: true, // Infinite loop
-    slidesToShow: 5, // Number of images visible at once
-    slidesToScroll: 1,
-    autoplay: true, // Enable auto-scroll
-    autoplaySpeed: 2000, // Speed of auto-scroll (in ms)
-    draggable: true, // Enable dragging
-    speed: 1500, // Speed of transition (in ms)
-    cssEase: 'ease', // Smooth transition easing
-    swipeToSlide: true, // Enables dragging directly to the next slide
-    touchThreshold: 10, // Minimum touch distance to trigger swipe
-    arrows: false, // Remove arrows
-    centerMode: false, // Disable center mode to avoid interference with dragging
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3, // Show 3 images on medium screens
-          autoplay: true, // Ensure autoplay is enabled on medium screens
-          autoplaySpeed: 2000, // Consistent autoplay speed
-          speed: 500, // Smooth transition on medium screens
-          draggable: true, // Ensure dragging is enabled on medium screens
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2, // Show 2 images on small screens
-          draggable: true, // Enable dragging on mobile
-          autoplay: true, // Enable autoplay on mobile
-          autoplaySpeed: 200, // Consistent autoplay speed on small screens
-          speed: 1000, // Smooth transition on small screens
-        },
-      },
-    ],
+  const trackRef = useRef(null);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
+
+  useEffect(() => {
+    const track = trackRef.current;
+    let animationFrameId;
+    let speed = 0.5;
+
+    const scroll = () => {
+      track.scrollLeft += speed;
+      if (track.scrollLeft >= track.scrollWidth / 2) {
+        track.scrollLeft = 0;
+      }
+      animationFrameId = requestAnimationFrame(scroll);
+    };
+
+    animationFrameId = requestAnimationFrame(scroll);
+    return () => cancelAnimationFrame(animationFrameId);
+  }, []);
+
+  const startDrag = (x) => {
+    isDragging.current = true;
+    startX.current = x - trackRef.current.offsetLeft;
+    scrollLeft.current = trackRef.current.scrollLeft;
+  };
+
+  const moveDrag = (x) => {
+    if (!isDragging.current) return;
+    const walk = x - startX.current;
+    trackRef.current.scrollLeft = scrollLeft.current - walk;
+  };
+
+  const endDrag = () => {
+    isDragging.current = false;
   };
 
   return (
-    <div className="carousel-container">
-      <Slider {...settings}>
-        {images.map((img, idx) => (
-          <div className="carousel-slide" key={idx}>
-            <img src={img} alt="client logo" className="carousel-img" />
+    <div
+      className="carousel"
+      ref={trackRef}
+      onMouseDown={(e) => startDrag(e.pageX)}
+      onMouseMove={(e) => moveDrag(e.pageX)}
+      onMouseUp={endDrag}
+      onMouseLeave={endDrag}
+      onTouchStart={(e) => startDrag(e.touches[0].pageX)}
+      onTouchMove={(e) => {
+        moveDrag(e.touches[0].pageX);
+        e.preventDefault(); // Prevent vertical scroll on mobile
+      }}
+      onTouchEnd={endDrag}
+    >
+      <div className="carousel-track">
+        {[...images, ...images].map((img, index) => (
+          <div key={index} className="carousel-slide">
+            <img src={img} alt="client" className="carousel-img" />
           </div>
         ))}
-      </Slider>
+      </div>
     </div>
   );
 }
