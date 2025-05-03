@@ -85,9 +85,9 @@ export default function Projects() {
             </div>
             {/* <Link to=""> */}
             <div>
-            <button className=" absolute bottom-0 self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all translate-x-[-50%] mb-5 border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
-              Read More
-            </button>
+              <button className=" absolute bottom-0 self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all translate-x-[-50%] mb-5 border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
+                Read More
+              </button>
             </div>
             {/* </Link> */}
           </div>
@@ -96,7 +96,7 @@ export default function Projects() {
             <div className="absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-500 ease-in-out group-hover:opacity-0">
               <h3 className="text-2xl md:text-4xl pb-5">Arena PUBG Cup</h3>
               <p className=" md:text-2xl p-5">
-              Bringing the Community Together
+                Bringing the Community Together
               </p>
             </div>
 
@@ -110,14 +110,12 @@ export default function Projects() {
             </div>
             {/* <Link to=""> */}
             <div>
-            <button className=" absolute bottom-0 self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all translate-x-[-50%] mb-5 border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
-              Read More
-            </button>
+              <button className=" absolute bottom-0 self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all translate-x-[-50%] mb-5 border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
+                Read More
+              </button>
             </div>
             {/* </Link> */}
           </div>
-
-          
         </div>
       </div>
       <div className=" bg-[#000000] z-50 ">
@@ -138,8 +136,10 @@ export default function Projects() {
         </div>
       </div>
       <div className="relative flex justify-center m-auto -mt-24 md:mb-12 mb-8  md:w-[350px] w-[250px]">
-        <img className="block" src={eclipse} alt="eclipse" />
-        <div className=" absolute "><img className="block  " src={rings} alt="eclipse" /></div>
+        <img className="block z-40" src={eclipse} alt="eclipse" />
+        <div className=" absolute  z-50">
+          <img className="block " src={rings} alt="eclipse" />
+        </div>
       </div>
       <Footer></Footer>
     </div>
