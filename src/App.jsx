@@ -9,6 +9,7 @@ import Services from './components/Services/Services'
 import Client from './components/Client/Client'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
+import Gamesproj from './components/Gamesproj/Gamesproj'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Route path="/clients" element={<Client></Client>}></Route>
       <Route path="/projects" element={<Projects></Projects>}></Route>
       <Route path="/contact" element={<Contact></Contact>}></Route>
+      <Route path="/356games" element={<Gamesproj></Gamesproj>}></Route>
     </Routes>
     </>
   )

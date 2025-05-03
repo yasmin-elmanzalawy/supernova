@@ -9,6 +9,8 @@ import arena from "../../assets/arena.png";
 import games from "../../assets/games.png";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
+import { Link } from "react-router-dom";
+
 
 export default function Projects() {
   return (
@@ -83,13 +85,13 @@ export default function Projects() {
                 className="w-[full] h-full object-cover"
               />
             </div>
-            {/* <Link to=""> */}
+            <Link to="/356games">
             <div>
               <button className=" absolute bottom-0 self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all translate-x-[-50%] mb-5 border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
                 Read More
               </button>
             </div>
-            {/* </Link> */}
+            </Link>
           </div>
           <div className="group relative rounded-lg border-4 m-7 border-[#7c009b59] text-white text-center w-[90vw] md:w-[40vw] h-[60vh] overflow-hidden">
             {/* Text container */}
@@ -108,7 +110,7 @@ export default function Projects() {
                 className="w-[full] h-full object-cover"
               />
             </div>
-            {/* <Link to=""> */}
+            {/* <Link to="/356games"> */}
             <div>
               <button className=" absolute bottom-0 self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all translate-x-[-50%] mb-5 border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
                 Read More

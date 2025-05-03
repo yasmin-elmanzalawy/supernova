@@ -9,32 +9,29 @@ import discord from "../../assets/discord.png";
 import linkedin from "../../assets/linkden.png";
 import star from "../../assets/semiministar.png";
 
-
 export default function Footer() {
-
   const stars = Array.from({ length: 10 }, (_, i) => ({
     top: Math.random() * 700,
     left: Math.random() * window.innerWidth,
     delay: Math.random() * 2.5,
   }));
 
-
   return (
     <div className="relative bg-black pt-24 overflow-hidden">
-           {/* Shooting stars */}
-              {stars.map((starItem, index) => (
-                <img
-                  key={index}
-                  src={star}
-                  alt="star"
-                  className="star"
-                  style={{
-                    top: `${starItem.top}px`,
-                    left: `${starItem.left}px`,
-                    animationDelay: `${starItem.delay}s`,
-                  }}
-                />
-              ))}
+      {/* Shooting stars */}
+      {stars.map((starItem, index) => (
+        <img
+          key={index}
+          src={star}
+          alt="star"
+          className="star"
+          style={{
+            top: `${starItem.top}px`,
+            left: `${starItem.left}px`,
+            animationDelay: `${starItem.delay}s`,
+          }}
+        />
+      ))}
       <div className="relative z-50 text-white p-4 flex-wrap md:flex-nowrap flex justify-center">
         <div className=" md:w-[30%] text-center my-12">
           <h3 className="text-3xl font-extrabold">Supernova</h3>
@@ -59,7 +56,7 @@ export default function Footer() {
               <img className="w-full block" src={tiktok} alt="tiktok icon" />
             </div>
           </div>
-          <div className="flex mt-[-50px]">
+          <div className="flex justify-center mt-[-50px]">
             <div className="md:me-[-60px]">
               <img
                 className="w-full block"
@@ -71,7 +68,7 @@ export default function Footer() {
               <img className="w-full block" src={yt} alt="youtibe icon" />
             </div>
             <div className="md:me-[-60px]">
-              <img className="w-full block" src={discord} alt="discord icon" />
+              <img className="w-full block " src={discord} alt="discord icon" />
             </div>
           </div>
         </div>
