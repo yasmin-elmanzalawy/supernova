@@ -12,9 +12,8 @@ export default function Client() {
       <div className="bg-[#000000] overflow-hidden text-white">
         <div
           style={{ backgroundImage: `url(${blobs})` }}
-          className="bg-cover flex flex-col"
+          className="bg-cover flex flex-col items-center"
         >
-          {" "}
           <div className="z-50">
             <Navbar />
           </div>
@@ -85,9 +84,6 @@ export default function Client() {
                   </button>
                 </div>
               </div>
-              {/* <div className="absolute left-[-70px] md:bottom-[1px]">
-              <img className="block" src={charmoon} alt="" />
-            </div> */}
             </div>
             <div className="flex flex-col justify-center bg-[rgba(0,0,0,0.5)] border-4 border-[#7c009b59] rounded-xl mx-8 md:mx-0 relative z-50 mt-24 md:mt-0">
               <div >
