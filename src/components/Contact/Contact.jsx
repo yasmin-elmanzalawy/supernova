@@ -12,7 +12,7 @@ export default function Client() {
       <div className="bg-[#000000] overflow-hidden text-white">
         <div
           style={{ backgroundImage: `url(${blobs})` }}
-          className="bg-cover flex flex-col items-center"
+          className="bg-cover flex flex-col "
         >
           <div className="z-50">
             <Navbar />
@@ -26,7 +26,7 @@ export default function Client() {
               Remarked*
             </p>
           </div>
-          <div className="flex md:gap-24 flex-wrap md:flex-nowrap md:m-12">
+          <div className="flex justify-center md:gap-24 flex-wrap md:flex-nowrap md:m-12">
             <div className=" bg-[rgba(0,0,0,0.5)] border-4 border-[#7c009b59] rounded-xl mx-8 md:mx-0 relative z-50 mt-24 md:mt-0">
               <div className="p-12">
                 <div className="flex gap-5 flex-wrap md:flex-nowrap">
