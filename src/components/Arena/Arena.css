@@ -1,0 +1,37 @@
+@keyframes jump {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-20px) scale(1.1);
+    }
+  }
+  
+  .bomb-animate {
+    position: absolute;
+    width: 60px;
+    animation: jump 2s ease-in-out infinite;
+    z-index: 0;
+  }
+  
+  .bomb-1 {
+    animation-delay: 0s;
+  }
+  
+  .bomb-2 {
+    animation-delay: 0.3s;
+  }
+  
+  .bomb-3 {
+    animation-delay: 0.6s;
+  }
+  
+  .bomb-4 {
+    animation-delay: 0.6s;
+  }
+  
+  .bomb-5 {
+    animation-delay: 0.6s;
+  }
+  

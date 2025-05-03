@@ -16,7 +16,7 @@ export default function Gamesproj() {
       <div className="bg-black ">
         <div
           style={{ backgroundImage: `url(${blobs})` }}
-          className="bg-cover bg-center min-h-screen flex flex-col"
+          className="bg-cover  min-h-screen flex flex-col"
         >
           <div className="z-50 relative pt-4 px-6">
             <Navbar />
@@ -36,7 +36,7 @@ export default function Gamesproj() {
                   {/* Cubes Behind */}
                   <img
                     src={cube}
-                    className="cube-animate cube-1 top-[20%] left-[10%] md:left-[20%] "
+                    className="cube-animate cube-1 top-[20%] left-[8%] md:left-[20%] "
                     alt="cube 1"
                   />
                   <img
@@ -177,6 +177,9 @@ export default function Gamesproj() {
           </div>
           <div className="md:w-[70vw] w-[90vw] m-auto py-12">
             <img src= {banner} className="w-full block" alt="banner (ايه قنبلة الموسم؟)" />
+          </div>
+          <div className="text-white text-center py-5 font-bold px-5 rounded-lg border-4 m-7 border-[#7c009b59] md:text-2xl">
+            <p>At Supernova Gaming, we don’t just create content—we bring gaming experiences to life.</p>
           </div>
         </div>
         <Footer></Footer>

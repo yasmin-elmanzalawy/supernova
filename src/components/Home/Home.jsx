@@ -17,10 +17,10 @@ export default function Home() {
   return (
     <div>
       <div
-        className="hero-section h-screen bg-cover bg-[position:30%] md:bg-[position:20%] lg:bg-[position:0%]"
+        className="relative hero-section h-screen bg-cover bg-[position:30%] md:bg-[position:20%] lg:bg-[position:0%]"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <div className="absolute inset-0 bg-black opacity-60"></div>
+        <div className="absolute left-0 right-0 top-0 bottom-0 bg-black opacity-60"></div>
         <div className="z-3 relative">
           <Navbar />
           <div className="flex flex-col justify-center items-center text-white h-[70vh] text-center px-4">
@@ -36,7 +36,6 @@ export default function Home() {
               onMouseEnter={() => setHovered(true)}
               onMouseLeave={() => setHovered(false)}
             >
-              {/* Left Arrow */}
               <img
                 src={leftArrow}
                 alt="Left Arrow"
@@ -45,14 +44,12 @@ export default function Home() {
                 } relative top-4`}
               />
 
-              {/* Expanding White Line */}
               <div
                 className={`h-2 sm:h-4 bg-white transition-all duration-500 ${
                   hovered ? "w-24 sm:w-50 opacity-100" : "w-0 opacity-0"
                 }`}
               ></div>
 
-              {/* Right Arrow */}
               <img
                 src={rightArrow}
                 alt="Right Arrow"
@@ -64,7 +61,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* second container */}
       <div className="bg-[radial-gradient(ellipse_at_center,_#9545FF,_#592999)] flex flex-col md:flex-row">
         <div className="md:w-[50%] flex flex-col justify-center text-white p-8 ">
           <h3 className="text-5xl font-bold pb-12">
@@ -77,7 +73,7 @@ export default function Home() {
             ensuring top-quality solutions that elevate the gaming experience
           </p>
           <Link to="/about">
-            <button className=" self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
+            <button className="self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
               About us
             </button>
           </Link>

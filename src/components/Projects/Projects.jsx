@@ -15,32 +15,28 @@ import { Link } from "react-router-dom";
 export default function Projects() {
   return (
     <div className="relative bg-[#000000] min-h-screen overflow-hidden">
-      {/* Full Background Container including Navbar, images, text */}
+
       <div
         style={{ backgroundImage: `url(${blobs})` }}
         className="bg-cover bg-center min-h-screen flex flex-col"
       >
-        {/* Navbar normally positioned at the top */}
         <div className="z-50">
           <Navbar />
         </div>
 
-        {/* Main Content */}
         <div className="flex-1 flex flex-col md:flex-row items-center justify-center relative ">
-          {/* Left Image */}
           <img
             src={powder}
             alt="Powder"
             className="h-[50vh] md:h-[100vh] object-contain md:absolute md:left-10 md:top-1/2 md:translate-y-[-60%] top-20 left-5"
           />
 
-          {/* Center Text */}
           <div className="text-center z-10 px-4 mt-10 md:mt-0">
             <h3
               className="text-4xl md:text-8xl font-medium text-white mb-4"
               style={{
-                WebkitTextStroke: "2px #5A3392", // Purple outline
-                textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", // Optional shadow for a subtle effect
+                WebkitTextStroke: "2px #5A3392", 
+                textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", 
               }}
             >
               Our Past Projects
@@ -49,15 +45,14 @@ export default function Projects() {
             <p
               className="text-2xl md:text-5xl font-normal text-white mb-4"
               style={{
-                WebkitTextStroke: "1px #5A3392", // Purple outline
-                textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", // Optional shadow for a subtle effect
+                WebkitTextStroke: "1px #5A3392", 
+                textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", 
               }}
             >
               Elevating Gaming Through Content & Esports
             </p>
           </div>
 
-          {/* Right Image */}
           <img
             src={jinx}
             alt="Jinx"
@@ -66,10 +61,8 @@ export default function Projects() {
         </div>
       </div>
       <div className=" my-32">
-        {/* projects section */}
         <div className="flex flex-wrap gap-5 justify-around">
           <div className="group relative rounded-lg border-4 m-7 border-[#7c009b59] text-white text-center w-[90vw] md:w-[40vw] h-[60vh] overflow-hidden">
-            {/* Text container */}
             <div className="absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-500 ease-in-out group-hover:opacity-0">
               <h3 className="text-2xl md:text-4xl pb-5">356Games.net</h3>
               <p className=" md:text-2xl p-5">
@@ -77,10 +70,9 @@ export default function Projects() {
               </p>
             </div>
 
-            {/* Image container (hidden by default) */}
             <div className="w-[300px] m-auto md:mt-28 mt-28 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
               <img
-                src={games} // replace with your image path
+                src={games}
                 alt="Gaming Visual"
                 className="w-[full] h-full object-cover"
               />
@@ -94,7 +86,6 @@ export default function Projects() {
             </Link>
           </div>
           <div className="group relative rounded-lg border-4 m-7 border-[#7c009b59] text-white text-center w-[90vw] md:w-[40vw] h-[60vh] overflow-hidden">
-            {/* Text container */}
             <div className="absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-500 ease-in-out group-hover:opacity-0">
               <h3 className="text-2xl md:text-4xl pb-5">Arena PUBG Cup</h3>
               <p className=" md:text-2xl p-5">
@@ -102,21 +93,20 @@ export default function Projects() {
               </p>
             </div>
 
-            {/* Image container (hidden by default) */}
             <div className="w-[300px] m-auto md:mt-12 mt-12 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
               <img
-                src={arena} // replace with your image path
+                src={arena} 
                 alt="Gaming Visual"
                 className="w-[full] h-full object-cover"
               />
             </div>
-            {/* <Link to="/356games"> */}
+            <Link to="/arena">
             <div>
               <button className=" absolute bottom-0 self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all translate-x-[-50%] mb-5 border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
                 Read More
               </button>
             </div>
-            {/* </Link> */}
+            </Link>
           </div>
         </div>
       </div>
@@ -128,8 +118,8 @@ export default function Projects() {
           <p
             className="text-center md:px-64 px-12 py-32 text-2xl md:text-4xl font-normal z-50 relative text-white mb-4"
             style={{
-              WebkitTextStroke: "1px #5A3392", // Purple outline
-              textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", // Optional shadow for a subtle effect
+              WebkitTextStroke: "1px #5A3392", 
+              textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", 
             }}
           >
             Empowering Gaming Brands with Creative Content, Engaging
