@@ -136,8 +136,15 @@ export default function Projects() {
         </div>
       </div>
       <div className="relative flex justify-center m-auto -mt-24 md:mb-12 mb-8  md:w-[350px] w-[250px]">
-        <img className="block z-40" src={eclipse} alt="eclipse" />
-        <div className=" absolute  z-50">
+        <div className=" overflow-hidden">
+          <img
+            src={eclipse}
+            alt="eclipse"
+            className="block z-40 scale-125"
+            style={{ clipPath: "inset(1px)" }}
+          />
+        </div>
+        <div className=" absolute z-50">
           <img className="block " src={rings} alt="eclipse" />
         </div>
       </div>
