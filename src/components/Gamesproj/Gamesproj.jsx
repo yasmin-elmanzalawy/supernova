@@ -53,7 +53,7 @@ export default function Gamesproj() {
                   {/* Mobile Image */}
                   <img
                     src={mobile}
-                    className="w-[250px] relative z-10"
+                    className="w-[250px] relative"
                     alt="356 games on a mobile screen"
                   />
                 </div>
