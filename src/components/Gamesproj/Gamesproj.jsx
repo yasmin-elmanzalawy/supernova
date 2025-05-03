@@ -18,12 +18,12 @@ export default function Gamesproj() {
           style={{ backgroundImage: `url(${blobs})` }}
           className="bg-cover bg-center min-h-screen flex flex-col"
         >
-          <div className="z-10 relative pt-4 px-6">
+          <div className="z-50 relative pt-4 px-6">
             <Navbar />
           </div>
           <div>
             <p
-              className="text-center md:px-64 px-12 pt-5 text-2xl md:text-4xl z-50 relative font-bold   text-[#5A3392]"
+              className="text-center md:px-64 px-12 pt-5 text-2xl md:text-4xl relative font-bold   text-[#5A3392]"
              
             >
               365Games – Bringing Gaming to Life Through Engaging Content
