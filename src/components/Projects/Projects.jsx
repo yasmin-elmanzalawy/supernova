@@ -5,6 +5,8 @@ import jinx from "../../assets/jinx.png";
 import powder from "../../assets/powder.png";
 import eclipse from "../../assets/eclipse.gif";
 import rings from "../../assets/rings.png";
+import arena from "../../assets/arena.png";
+import games from "../../assets/games.png";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
@@ -17,7 +19,9 @@ export default function Projects() {
         className="bg-cover bg-center min-h-screen flex flex-col"
       >
         {/* Navbar normally positioned at the top */}
-       <div className="z-50"><Navbar /></div> 
+        <div className="z-50">
+          <Navbar />
+        </div>
 
         {/* Main Content */}
         <div className="flex-1 flex flex-col md:flex-row items-center justify-center relative ">
@@ -62,29 +66,80 @@ export default function Projects() {
       <div className=" my-32">
         {/* projects section */}
         <div className="flex flex-wrap gap-5 justify-around">
-          <div className="flex-col flex justify-around items-center rounded-lg border-4 border-[#7c009b59] text-white text-center w-[90vw] md:w-[40vw] h-[50vh] p-12 ">
-            <h3 className="text-4xl">356Games.net</h3>
-            <p className="text-2xl">
-              365Games – Bringing Gaming to Life Through Engaging Content
-            </p>
+          <div className="group relative rounded-lg border-4 m-7 border-[#7c009b59] text-white text-center w-[90vw] md:w-[40vw] h-[60vh] overflow-hidden">
+            {/* Text container */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+              <h3 className="text-2xl md:text-4xl pb-5">356Games.net</h3>
+              <p className=" md:text-2xl p-5">
+                365Games – Bringing Gaming to Life Through Engaging Content
+              </p>
+            </div>
+
+            {/* Image container (hidden by default) */}
+            <div className="w-[300px] m-auto md:mt-28 mt-28 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+              <img
+                src={games} // replace with your image path
+                alt="Gaming Visual"
+                className="w-[full] h-full object-cover"
+              />
+            </div>
+            {/* <Link to=""> */}
+            <div>
+            <button className=" absolute bottom-0 self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all translate-x-[-50%] mb-5 border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
+              Read More
+            </button>
+            </div>
+            {/* </Link> */}
           </div>
-          <div className="flex-col flex justify-around items-center rounded-lg border-4 border-[#7c009b59] text-white text-center w-[90vw] md:w-[40vw] h-[50vh] p-12 ">
-            <h3 className="text-4xl">Arena PUBG Cup</h3>
-            <p className="text-2xl">Bringing the Community Together</p>
+          <div className="group relative rounded-lg border-4 m-7 border-[#7c009b59] text-white text-center w-[90vw] md:w-[40vw] h-[60vh] overflow-hidden">
+            {/* Text container */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+              <h3 className="text-2xl md:text-4xl pb-5">Arena PUBG Cup</h3>
+              <p className=" md:text-2xl p-5">
+              Bringing the Community Together
+              </p>
+            </div>
+
+            {/* Image container (hidden by default) */}
+            <div className="w-[300px] m-auto md:mt-12 mt-12 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
+              <img
+                src={arena} // replace with your image path
+                alt="Gaming Visual"
+                className="w-[full] h-full object-cover"
+              />
+            </div>
+            {/* <Link to=""> */}
+            <div>
+            <button className=" absolute bottom-0 self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all translate-x-[-50%] mb-5 border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
+              Read More
+            </button>
+            </div>
+            {/* </Link> */}
           </div>
+
+          
         </div>
       </div>
-      <div className=" bg-[#000000] z-50">
-      <div style={{ backgroundImage: `url(${bgsec})` }} className="bg-cover bg-center relative z-50">
-        <p  className="text-center md:px-64 px-12 py-32 text-2xl md:text-4xl font-normal z-50 relative text-white mb-4"
-              style={{
-                WebkitTextStroke: "1px #5A3392", // Purple outline
-                textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", // Optional shadow for a subtle effect
-              }}>Empowering Gaming Brands with Creative Content, Engaging Experiences, and Unforgettable Esports Events.</p>
-      </div></div>
-      <div className="flex justify-center -mt-32">
+      <div className=" bg-[#000000] z-50 ">
+        <div
+          style={{ backgroundImage: `url(${bgsec})` }}
+          className="bg-cover bg-center relative z-50"
+        >
+          <p
+            className="text-center md:px-64 px-12 py-32 text-2xl md:text-4xl font-normal z-50 relative text-white mb-4"
+            style={{
+              WebkitTextStroke: "1px #5A3392", // Purple outline
+              textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", // Optional shadow for a subtle effect
+            }}
+          >
+            Empowering Gaming Brands with Creative Content, Engaging
+            Experiences, and Unforgettable Esports Events.
+          </p>
+        </div>
+      </div>
+      <div className="relative flex justify-center m-auto -mt-24 md:mb-12 mb-8  md:w-[350px] w-[250px]">
         <img className="block" src={eclipse} alt="eclipse" />
-        <img className="block absolute -z-10" src={rings} alt="eclipse" />
+        <div className=" absolute "><img className="block  " src={rings} alt="eclipse" /></div>
       </div>
       <Footer></Footer>
     </div>
