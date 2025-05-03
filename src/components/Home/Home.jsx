@@ -39,23 +39,23 @@ export default function Home() {
               <img
                 src={leftArrow}
                 alt="Left Arrow"
-                className={`w-12 sm:w-20 transition-transform duration-500 ${
-                  hovered ? "-translate-x-24 -mr-2" : "-mr-6"
-                } relative top-4`}
+                className={`w-20 sm:w-20 transition-transform duration-500 ${
+                  hovered ? "md:-translate-x-24 -translate-x-12 -mr-2" : "-mr-10"
+                } relative top-10`}
               />
 
               <div
-                className={`h-2 sm:h-4 bg-white transition-all duration-500 ${
+                className={`h-2  transition-all duration-500 ${
                   hovered ? "w-24 sm:w-50 opacity-100" : "w-0 opacity-0"
                 }`}
-              ></div>
+              ><Link className="drop-shadow-[0_0_3px_#A855F7] text-xl text-white group-hover:opacity-100" to='/about'>Start Your Journey</Link> </div>
 
               <img
                 src={rightArrow}
                 alt="Right Arrow"
-                className={`w-12 sm:w-20 transition-transform duration-500 ${
-                  hovered ? "translate-x-24 -ml-2" : "-ml-6"
-                } relative -top-4`}
+                className={`w-20 sm:w-20 transition-transform duration-500 ${
+                  hovered ? "md:translate-x-24 translate-x-12 -ml-2" : "-ml-10"
+                } relative top-3`}
               />
             </div>
           </div>

@@ -106,7 +106,7 @@ export default function Arena() {
               </div>
               <div className="md:flex">
               <div>
-                    <div className="flex gap-5 my-7 ms-5 me-12 items-start md:items-center">
+                    <div className=" flex gap-5 my-7 ms-5 me-12 items-start md:items-center">
                       <div className="ms-3 me-4 md:w-32 w-[300px]">
                         <img
                           src={colab}
