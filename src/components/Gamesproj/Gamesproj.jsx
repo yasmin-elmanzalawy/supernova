@@ -176,6 +176,7 @@ export default function Gamesproj() {
           <div className="md:w-[70vw] w-[90vw] m-auto py-12">
             <video
               src={bannervid}
+              autoPlay
               loop
               
               playsInline
