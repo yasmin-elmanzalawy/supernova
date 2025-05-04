@@ -130,10 +130,10 @@ export default function TeamMembers() {
         </div>
         </div>
         <div style={memberInfoStyles}>
-          <h3 style={memberNameStyles}>Abdelrahman Emad </h3>
-          <p style={nickname}>“Escanor”</p>
+          <h3 style={memberNameStyles}>Abdelrahman Mesbah </h3>
+          <p style={nickname}>“Ekkos Paradox”</p>
           <p style={memberDescStyles}>
-          Head Of Admins
+          Founder
           </p>
         </div>
       </div>
