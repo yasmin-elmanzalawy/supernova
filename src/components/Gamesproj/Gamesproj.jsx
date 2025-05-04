@@ -174,14 +174,12 @@ export default function Gamesproj() {
             </div>
           </div>
           <div className="md:w-[70vw] w-[90vw] m-auto py-12">
-            <video
-              src={bannervid}
-              autoPlay
-              loop
-              
-              playsInline
-              style={{ width: "100%", height: "auto", objectFit: "cover" }}
-            />
+          <video
+      src={bannervid}
+      controls
+      style={{ width: "100%", height: "auto", objectFit: "cover" }}
+    >
+=    </video>
             {/* <img src= {banner} className="w-full block" alt="banner (ايه قنبلة الموسم؟)" /> */}
           </div>
           <div className="text-white text-center py-5 font-bold px-5 rounded-lg border-4 m-7 border-[#7c009b59] md:text-2xl">
