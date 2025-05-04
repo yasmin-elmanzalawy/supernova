@@ -6,6 +6,7 @@ import mobile from "../../assets/mobile.png";
 import colab from "../../assets/colab.png";
 import thndr from "../../assets/thndr.png";
 import cube from "../../assets/cube.png";
+import bannervid from "../../assets/banner.mp4";
 import Navbar from "../Navbar/Navbar";
 import "./Gamesproj.css";
 import Footer from "../Footer/Footer";
@@ -22,10 +23,7 @@ export default function Gamesproj() {
             <Navbar />
           </div>
           <div>
-            <p
-              className="text-center md:px-64 px-12 pt-5 text-2xl md:text-4xl relative font-bold   text-[#5A3392]"
-             
-            >
+            <p className="text-center md:px-64 px-12 pt-5 text-2xl md:text-4xl relative font-bold   text-[#5A3392]">
               365Games – Bringing Gaming to Life Through Engaging Content
             </p>
           </div>
@@ -176,10 +174,21 @@ export default function Gamesproj() {
             </div>
           </div>
           <div className="md:w-[70vw] w-[90vw] m-auto py-12">
-            <img src= {banner} className="w-full block" alt="banner (ايه قنبلة الموسم؟)" />
+            <video
+              src={bannervid}
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{ width: "100%", height: "auto", objectFit: "cover" }}
+            />
+            {/* <img src= {banner} className="w-full block" alt="banner (ايه قنبلة الموسم؟)" /> */}
           </div>
           <div className="text-white text-center py-5 font-bold px-5 rounded-lg border-4 m-7 border-[#7c009b59] md:text-2xl">
-            <p>At Supernova Gaming, we don’t just create content—we bring gaming experiences to life.</p>
+            <p>
+              At Supernova Gaming, we don’t just create content—we bring gaming
+              experiences to life.
+            </p>
           </div>
         </div>
         <Footer></Footer>
