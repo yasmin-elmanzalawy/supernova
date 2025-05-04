@@ -48,7 +48,7 @@ export default function Home() {
                 className={`h-2  transition-all duration-500 ${
                   hovered ? "w-24 sm:w-50 opacity-100" : "w-0 opacity-0"
                 }`}
-              ><Link className="drop-shadow-[0_0_3px_#A855F7] text-xl text-white group-hover:opacity-100" to='/about'>Start Your Journey</Link> </div>
+              ><Link className="drop-shadow-[0_0_3px_#A855F7] text-2xl text-white group-hover:opacity-100" to='/about'>Start Your Journey</Link> </div>
 
               <img
                 src={rightArrow}
