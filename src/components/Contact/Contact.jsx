@@ -96,7 +96,7 @@ export default function Client() {
                   </div>
                   <div className="px-5">
                     <p className="text-[#7D009B]">Email:</p>
-                    <p>shadyyasser@supernova-gaming.com</p>
+                    <p>info@supernova-gaming.com</p>
                   </div>
                 </div>
                 <div className="flex m-5">
@@ -105,7 +105,7 @@ export default function Client() {
                   </div>
                   <div className="px-5">
                     <p className="text-[#7D009B]">Phone Number:</p>
-                    <p>+20 1000698166</p>
+                    <p>+20 15 0393 3933</p>
                   </div>
                 </div>
               </div>

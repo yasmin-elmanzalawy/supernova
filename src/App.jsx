@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Home from './components/Home/Home'
 import About from './components/About/About'
+import Teams from './components/Teams/Teams'
 import { Routes, Route } from 'react-router-dom'
 import Services from './components/Services/Services'
 import Client from './components/Client/Client'
@@ -23,6 +24,7 @@ function App() {
     <Routes>
       <Route path = "/" element={<Home></Home>}></Route>
       <Route path="/about" element={<About></About>}></Route>
+      <Route path="/teams" element={<Teams></Teams>}></Route>
       <Route path="/services" element={<Services></Services>}></Route>
       <Route path="/clients" element={<Client></Client>}></Route>
       <Route path="/projects" element={<Projects></Projects>}></Route>

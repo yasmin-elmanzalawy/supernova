@@ -102,7 +102,7 @@ export default function Home() {
           Our Team
         </h3>
         <TeamMembers></TeamMembers>
-        <Link to="#">
+        <Link to="/teams">
           {" "}
           <div className="flex justify-center my-14">
             <button className="inline-block text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">

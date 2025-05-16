@@ -40,8 +40,8 @@ export default function Footer() {
         </div>
         <div className=" md:w-[30%] text-center my-12">
           <h3 className="text-3xl font-extrabold ">Contact Information</h3>
-          <p className="py-12 text-xl "> shadyyasser@supernova-gaming.com</p>
-          <p className="text-xl">+20 1000698166 </p>
+          <p className="py-12 text-xl "> info@supernova-gaming.com</p>
+          <p className="text-xl">+20 15 0393 3933 </p>
         </div>
         <div className="md:w-[20%] text-center my-12">
           <h3 className="text-3xl font-extrabold ">Follow Us</h3>

@@ -14,26 +14,27 @@ import { Link } from "react-router-dom";
 
 export default function Projects() {
   return (
-    <div className="relative bg-[#000000] min-h-screen overflow-hidden">
+    <div className="relative bg-[#000000]  overflow-hidden">
 
       <div
         style={{ backgroundImage: `url(${blobs})` }}
-        className="bg-cover bg-center min-h-screen flex flex-col"
+        className="bg-cover bg-center flex flex-col"
       >
         <div className="z-50">
           <Navbar />
         </div>
 
-        <div className="flex-1 flex flex-col md:flex-row items-center justify-center relative ">
-          <img
+        <div className=" ">
+          {/* <img
             src={powder}
             alt="Powder"
             className="h-[50vh] md:h-[100vh] object-contain md:absolute md:left-10 md:top-1/2 md:translate-y-[-60%] top-20 left-5"
-          />
+          /> */}
 
-          <div className="text-center z-10 px-4 mt-10 md:mt-0">
+          <div className="text-center z-10 px-4 my-24 md:mt-0">
+            {/* flex-1 flex flex-col md:flex-row items-center justify-center relative */}
             <h3
-              className="text-4xl md:text-8xl font-medium text-white mb-4"
+              className="text-3xl md:text-5xl font-medium text-white my-8"
               style={{
                 WebkitTextStroke: "2px #5A3392", 
                 textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", 
@@ -43,7 +44,7 @@ export default function Projects() {
             </h3>
 
             <p
-              className="text-2xl md:text-5xl font-normal text-white mb-4"
+              className="text-2xl md:text-3xl font-normal text-white "
               style={{
                 WebkitTextStroke: "1px #5A3392", 
                 textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", 
@@ -53,14 +54,14 @@ export default function Projects() {
             </p>
           </div>
 
-          <img
+          {/* <img
             src={jinx}
             alt="Jinx"
             className="h-[50vh] md:h-[100vh]  md:d-block object-contain md:absolute md:right-10 md:bottom-1/2 md:translate-y-[40%] bottom-0 right-5"
-          />
+          /> */}
         </div>
       </div>
-      <div className=" my-32">
+      <div className=" ">
         <div className="flex flex-wrap gap-5 justify-around">
           <div className="group relative rounded-lg border-4 m-7 border-[#7c009b59] text-white text-center w-[90vw] md:w-[40vw] h-[60vh] overflow-hidden">
             <div className="absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-500 ease-in-out group-hover:opacity-0">
