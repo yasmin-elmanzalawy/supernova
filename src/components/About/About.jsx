@@ -155,7 +155,7 @@ export default function About() {
               <span className="text-white">Parallel</span> Universe{" "}
               <span className="text-white">for</span> Gamers
             </h3>
-            <p className="text-xl md:text-3xl text-gray-300">
+            <p className="text-xl md:text-2xl text-gray-300">
               SuperNova Gaming (SNG) is a fully remote gaming organization—not
               just an Esports organization, but a vibrant gaming community
               fueled by passion and dedication. Established in 2019, we have
@@ -212,11 +212,11 @@ export default function About() {
           </div>
         </div>
         {/* Second Section */}
-        <div className="text-white relative z-10 flex flex-col gap-5 md:flex-row min-h-screen items-center justify-center md:-my-24 my-24 px-8">
+        <div className="text-white relative z-10 flex flex-col gap-5 md:flex-row min-h-screen items-center justify-center md:-my-24 my-24 px-20">
           <div className="md:w-1/2">
             <div className="mb-8 ">
-              <h3 className="text-3xl md:text-5xl py-4">Our Mission</h3>
-              <p className="text-xl md:text-3xl font-light">
+              <h3 className="text-2xl md:text-5xl py-4">Our Mission</h3>
+              <p className="text-xl md:text-2xl font-light">
                 To revolutionize gaming experiences globally By providing
                 high-quality, innovative solutions that cater to the unique
                 needs of our clients. From tournament management to content
@@ -224,8 +224,8 @@ export default function About() {
               </p>
             </div>
             <div>
-              <h3 className="text-3xl md:text-5xl py-4">Our Vision</h3>
-              <p className="text-xl md:text-3xl font-light">
+              <h3 className="text-2xl md:text-5xl py-4">Our Vision</h3>
+              <p className="text-xl md:text-2xl font-light">
                 To support organizations in enhancing tournament management,
                 simplifying workflows, and boosting media and content creation.
                 We believe in collaboration to elevate and advance the gaming

@@ -58,8 +58,8 @@ export default function Services() {
     <div>
       {/* Hero Section */}
       <div
-        className="relative bg-cover overflow-hidden z-50 h-[100vh]"
-        style={{ backgroundImage: `url(${servicesbg})` }}
+        className="relative bg-cover overflow-hidden z-50 h-[100vh] bg-[radial-gradient(ellipse_at_center,_#7D009B,_#000000)]"
+        // style={{ backgroundImage: `url(${blobs})` }}
       >
         <div className="absolute inset-0 bg-black opacity-50"></div>
 
@@ -110,12 +110,12 @@ export default function Services() {
             <div
               key={index}
               style={{ backgroundImage: `url(${card.bg})` }}
-              className="relative bg-cover flex justify-center items-center flex-col rounded-xl overflow-hidden shadow-[0_10px_20px_#C084FC] border-b-[#C084FC] border-r-[#C084FC] border-l-[#C084FC] border-b-4 border-l-2 border-r-2
+              className="relative bg-cover flex justify-center items-center flex-col rounded-xl overflow-hidden shadow-[0_10px_20px_#C084FC] border-b-[#7d009b] border-r-[#7d009b] border-l-[#C084FC] border-b-4 border-l-2 border-r-2
               w-[300px] md:w-[45%] h-[400px] m-3"
             >
               <div className="absolute inset-0 bg-black opacity-70"></div>
               <div className="z-3 relative p-5 text-center">
-                <h3 className="py-5 text-2xl font-bold text-[#C084FC]">
+                <h3 className="py-5 text-2xl font-bold text-[#7d009b]">
                   {card.title}
                 </h3>
                 <p className="text-white text-lg">{card.description}</p>
