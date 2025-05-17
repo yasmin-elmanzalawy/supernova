@@ -17,7 +17,7 @@ export default function Footer() {
   }));
 
   return (
-    <div className="relative bg-black pt-24 overflow-hidden bg-[linear-gradient(to_bottom,_#101010_0%,_#101010_70%,_#7D009B)] ">
+    <div className="relative bg-black pt-24 overflow-hidden bg-[linear-gradient(to_bottom,_#000000_0%,_#000000_60%,_#7D009B)] ">
       {/* Shooting stars */}
       {stars.map((starItem, index) => (
         <img

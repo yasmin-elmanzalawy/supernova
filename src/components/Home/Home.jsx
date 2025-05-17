@@ -5,11 +5,13 @@ import ServicesCarousel from "../ServicesCarousel/ServicesCarousel";
 import heroBg from "../../assets/herobg.jpg";
 import leftArrow from "../../assets/leftarrow.png";
 import rightArrow from "../../assets/rightarrow.png";
+import gem from "../../assets/gem.png";
 import homeSec2 from "../../assets/home-sec2.png";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import ClientCarousel from "../ClientCarousel/ClientCarousel";
 import TeamMembers from "../TeamMembers/TeamMembers";
+import "./Home.css"
 
 export default function Home() {
   const [hovered, setHovered] = useState(false);
@@ -61,29 +63,37 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-[radial-gradient(ellipse_at_center,_#7D009B,_#000000)] flex flex-col md:flex-row">
+      <div  className="bg-[#101010] flex flex-col md:flex-row py-5" >
         <div className="md:w-[50%] flex flex-col justify-center text-white p-8 ">
-          <h3 className="text-5xl font-bold pb-12">
+          <h3 className="text-5xl font-bold pb-12 text-center">
             Discipline. Innovation. Altruism.
           </h3>
-          <p className="text-2xl pb-8">
+          <p className="text-2xl pb-8 text-center">
             We tailor our services to meet each client's needs, helping them
             grow and achieve their goals within their budget. We prioritize
             innovation, collaboration, quality, expertise and integrity,
             ensuring top-quality solutions that elevate the gaming experience
           </p>
           <Link to="/about">
-            <button className="self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
+            <button className="self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] m-auto block">
               About us
             </button>
           </Link>
         </div>
-        <div className="md:w-[50%]">
-          <img className="block w-[100%]" src={homeSec2} alt="Gaming Arena" />
-        </div>
+        <div className="md:w-[50%] md:h-[100vh] flex items-center justify-center">
+  <div className="md:w-[50%] md:h-[100vh] flex items-center justify-center">
+  <img
+    className="block md:w-[80%] w-[50%] m-auto float-scale-animation"
+    src={gem}
+    alt="Gaming Arena"
+  />
+</div>
+
+</div>
+
       </div>
       {/* our services section */}
-      <div className="bg-[#1F1F1F] p-5">
+      <div className="bg-[radial-gradient(ellipse_at_center,_#7D009B,_#000000)] p-5">
         <h3 className="md:text-5xl text-4xl pt-5 font-bold text-white text-center">
           Our services
         </h3>
