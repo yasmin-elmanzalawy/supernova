@@ -140,7 +140,7 @@ export default function StyledCarousel() {
                 key={service.id}
                 className={`absolute w-[300px] md:w-[600px]  h-full rounded-2xl transition-all duration-300 bg-cover bg-center overflow-hidden ${
                   isActive
-                    ? "scale-100 border-[4px] border-purple-500 z-10"
+                    ? "scale-100 border-[4px] border-[#7D009B] z-10"
                     : "scale-90 opacity-30 z-0"
                 }`}
                 style={{
@@ -168,7 +168,7 @@ export default function StyledCarousel() {
                 }}
               >
                 <div className="p-6 h-full flex flex-col justify-end">
-                  <h3 className="text-xl font-bold text-purple-400">
+                  <h3 className="text-xl font-bold text-[#7D009B]">
                     {service.title}
                   </h3>
                   <p className="text-white font-medium text-sm mt-2">

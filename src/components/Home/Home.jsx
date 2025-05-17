@@ -61,7 +61,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="bg-[radial-gradient(ellipse_at_center,_#9545FF,_#592999)] flex flex-col md:flex-row">
+      <div className="bg-[radial-gradient(ellipse_at_center,_#7D009B,_#000000)] flex flex-col md:flex-row">
         <div className="md:w-[50%] flex flex-col justify-center text-white p-8 ">
           <h3 className="text-5xl font-bold pb-12">
             Discipline. Innovation. Altruism.
@@ -97,7 +97,7 @@ export default function Home() {
         <ClientCarousel></ClientCarousel>
       </div>
       {/* our teams section */}
-      <div className="bg-[linear-gradient(to_bottom,_#101010_0%,_#101010_70%,_#8000FF_100%)]  py-14">
+      <div className="bg-[linear-gradient(to_bottom,_#101010_0%,_#101010_70%,_#7D009B)]  py-14">
         <h3 className="md:text-5xl text-4xl py-4 font-bold text-white text-center ">
           Our Team
         </h3>
