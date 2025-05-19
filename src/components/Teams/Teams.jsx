@@ -216,7 +216,9 @@ export default function Teams() {
           </div>
         </div>
       </div>
-      <Footer></Footer>
+      <div>
+        <Footer></Footer>
+      </div>
     </div>
   );
 }
