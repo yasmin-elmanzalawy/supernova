@@ -28,10 +28,12 @@ export default function Client() {
           <div className="my-12">
             <ClientCarousel></ClientCarousel>
           </div>
-          <div className="my-24 text-center text-xl md:text-3xl font-extrabold">
-            <p>join us and be part of the Supernova Games adventure</p>
+          <div className="my-24 ">
+            <p className="text-center my-5 text-xl md:text-3xl font-extrabold">Partner with Supernova Gaming for Unforgettable Activations</p>
+            <p className="text-center text-xl my-6">Let's create unforgettable esports experiences together. 
+              <br />Whether you're a brand, agency, or event organizer — we're ready to level up your engagement.</p>
           </div>
-          <div><Planet></Planet></div>
+          <div className="md:py-0 py-24"><Planet></Planet></div>
         </div>
       </div>
       <Footer></Footer>
