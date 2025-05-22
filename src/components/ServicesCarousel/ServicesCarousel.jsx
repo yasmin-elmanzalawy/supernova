@@ -144,7 +144,7 @@ export default function StyledCarousel() {
                     : "scale-90 opacity-30 z-0"
                 }`}
                 style={{
-                  backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url(${service.image})`,
+                  backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.7)), url(${service.image})`,
                   left: isActive
                     ? `calc(50% - ${
                         window.innerWidth >= 768 ? "300px" : "150px"
@@ -161,17 +161,17 @@ export default function StyledCarousel() {
                 dragElastic={0.1}
                 onDragEnd={(e, info) => {
                   if (info.offset.x > 100) {
-                    paginate(-1); // Swipe left to go to previous
+                    paginate(-1);
                   } else if (info.offset.x < -100) {
-                    paginate(1); // Swipe right to go to next
+                    paginate(1);
                   }
                 }}
               >
-                <div className="p-6 h-full flex flex-col justify-end">
-                  <h3 className="text-xl font-bold text-[#7D009B]">
+                <div className="p-6 h-full flex flex-col justify-center items-center">
+                  <h3 className="md:text-3xl text-2xl text-center font-bold text-[#b535d5]">
                     {service.title}
                   </h3>
-                  <p className="text-white font-medium text-sm mt-2">
+                  <p className="text-white text-center font-medium  mt-2">
                     {service.description}
                   </p>
                 </div>

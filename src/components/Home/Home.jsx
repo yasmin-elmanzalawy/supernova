@@ -27,8 +27,8 @@ export default function Home() {
             <h1 className="text-4xl md:text-6xl font-bold m-5">
               SUPERNOVA GAMING
             </h1>
-            <p className="text-3xl md:text-6xl font-light m-5 ">
-              PARALLEL UNIVERSE FOR GAMERS
+            <p className="text-3xl md:text-4xl font-light m-5 ">
+             Powered by Events, Esports, and Immersive Experiences
             </p>
 
             <div
@@ -40,7 +40,9 @@ export default function Home() {
                 src={leftArrow}
                 alt="Left Arrow"
                 className={`w-20 sm:w-20 transition-transform duration-500 ${
-                  hovered ? "md:-translate-x-24 -translate-x-12 -mr-2" : "-mr-10"
+                  hovered
+                    ? "md:-translate-x-10 -translate-x-4 -mr-2"
+                    : "-mr-10"
                 } relative top-10`}
               />
 
@@ -48,13 +50,20 @@ export default function Home() {
                 className={`h-2  transition-all duration-500 ${
                   hovered ? "w-24 sm:w-50 opacity-100" : "w-0 opacity-0"
                 }`}
-              ><Link className="drop-shadow-[0_0_3px_#7d009b] text-2xl text-white group-hover:opacity-100" to='/about'>Start Your Journey</Link> </div>
+              >
+                <Link
+                  className=" font-russo drop-shadow-[0_0_3px_#7d009b] md:text-4xl text-2xl text-white group-hover:opacity-100"
+                  to="/about"
+                >
+                  START 
+                </Link>{" "}
+              </div>
 
               <img
                 src={rightArrow}
                 alt="Right Arrow"
                 className={`w-20 sm:w-20 transition-transform duration-500 ${
-                  hovered ? "md:translate-x-24 translate-x-12 -ml-2" : "-ml-10"
+                  hovered ? "md:translate-x-12 translate-x-4 -ml-2" : "-ml-10"
                 } relative top-3`}
               />
             </div>
@@ -64,13 +73,13 @@ export default function Home() {
       <div className="bg-[radial-gradient(ellipse_at_center,_#7D009B,_#000000)] flex flex-col md:flex-row">
         <div className="md:w-[50%] flex flex-col justify-center text-white p-8 ">
           <h3 className="text-5xl font-bold pb-12">
-            Discipline. Innovation. Altruism.
+            Driven by Discipline. Powered by Innovation. Guided by Purpose.
           </h3>
           <p className="text-2xl pb-8">
-            We tailor our services to meet each client's needs, helping them
-            grow and achieve their goals within their budget. We prioritize
-            innovation, collaboration, quality, expertise and integrity,
-            ensuring top-quality solutions that elevate the gaming experience
+            We customize our services to fit each client's needs, helping them
+            grow and reach their goals within budget. We focus on fresh ideas,
+            teamwork, quality, and honesty—delivering top-notch solutions that
+            enhance the gaming experience
           </p>
           <Link to="/about">
             <button className="self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">

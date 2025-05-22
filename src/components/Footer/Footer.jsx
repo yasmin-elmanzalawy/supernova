@@ -46,29 +46,29 @@ export default function Footer() {
         <div className="md:w-[20%] text-center my-12">
           <h3 className="text-3xl font-extrabold ">Follow Us</h3>
           <div className="flex justify-center ">
-            <div className="md:me-[-60px]">
-              <img className="w-full block" src={fb} alt="facebook icon" />
+            <div className="m-2">
+             <a href="https://www.facebook.com/TheSuperNovaGamingg"> <img className="w-full block" src={fb} alt="facebook icon" /></a>
             </div>
-            <div className="md:me-[-60px]">
-              <img className="w-full block" src={ig} alt="instagram icon" />
+            <div className="m-2">
+              <a href="https://www.instagram.com/thesupernovagaming/"><img className="w-full block" src={ig} alt="instagram icon" /></a>
             </div>
-            <div className="md:me-[-60px]">
-              <img className="w-full block" src={tiktok} alt="tiktok icon" />
+            <div className="m-2">
+             <a href="https://www.tiktok.com/@thesngshorts"><img className="w-full block" src={tiktok} alt="tiktok icon" /></a> 
             </div>
           </div>
-          <div className="flex justify-center mt-[-50px]">
-            <div className="md:me-[-60px]">
-              <img
+          <div className="flex justify-center mt-[-10px]">
+            <div className="m-2">
+              <a href="https://www.linkedin.com/company/supernovagaming"><img
                 className="w-full block"
                 src={linkedin}
                 alt="linkedin icon"
-              />
+              /></a>
             </div>
-            <div className="md:me-[-60px]">
-              <img className="w-full block" src={yt} alt="youtibe icon" />
+            <div className="m-2">
+             <a href="https://www.youtube.com/@thesupernovagamingg"> <img className="w-full block" src={yt} alt="youtibe icon" /></a>
             </div>
-            <div className="md:me-[-60px]">
-              <img className="w-full block " src={discord} alt="discord icon" />
+            <div className="m-2">
+             <a href="https://discord.com/invite/nbExCgThAv"> <img className="w-full block " src={discord} alt="discord icon" /></a>
             </div>
           </div>
         </div>
