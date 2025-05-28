@@ -2,6 +2,8 @@ import React from "react";
 import team from "../../assets/team.png";
 import union from "../../assets/Union.png";
 import stars from "../../assets/stars.png";
+import abdelrahmanMesbah from "../../assets/AMesbah.png";
+
 
 export default function TeamMembers() {
   const cardStyles = {
@@ -125,11 +127,11 @@ export default function TeamMembers() {
         <div style={cardBackgroundStyles}>
         <div style={innerBorder}>
           <img src={stars} alt="Stars" style={starsStyles} />
-          <img src={team} alt="Team" style={teamStyles} />
+          <img src={abdelrahmanMesbah} className="rounded-xl absolute inset-0 mt-5" alt="Team" style={teamStyles} />
           <img src={union} alt="Union" style={unionStyles} />
         </div>
         </div>
-        <div style={memberInfoStyles}>
+        <div style={memberInfoStyles}  className=" bg-black/70 shadow-lg backdrop-blur-sm z-50">
           <h3 style={memberNameStyles}>Abdelrahman Mesbah </h3>
           <p style={nickname}>“Ekkos Paradox”</p>
           <p style={memberDescStyles}>

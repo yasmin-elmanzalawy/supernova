@@ -49,18 +49,18 @@ export default function Client() {
 
   return (
     <div>
-      <div className="bg-[#000000] overflow-hidden text-white">
+      <div className="bg-[#000000] overflow-hidden text-white  pt-24 md:pt-36">
         <div
           style={{ backgroundImage: `url(${blobs})` }}
           className="bg-cover flex flex-col"
         >
           <Navbar />
 
-          <div className="mx-12">
-            <h2 className="md:text-4xl text-3xl font-bold mt-12 py-8">
+          <div className="mx-12 text-center">
+            <h2 className="text-center text-4xl font-bold mt-5 md:mt-12 text-white py-8">
               GET IN TOUCH
             </h2>
-            <p className="text-xl my-6">
+            <p className="text-center text-white text-2xl p-5">
               Your Email Address Will Not Be Published. Required Fields are
               Remarked*
             </p>
@@ -70,7 +70,7 @@ export default function Client() {
             {/* === FORM SECTION === */}
             <form
               onSubmit={handleSubmit}
-              className="bg-[rgba(0,0,0,0.5)] border-4 border-[#7c009b59] rounded-xl mx-8 md:mx-0 relative z-50 mt-24 md:mt-0"
+              className="bg-[rgba(0,0,0,0.5)] border-4 border-[#7c009b59] rounded-xl mx-8 md:mx-0 relative z-50 mt-4 md:mt-0"
             >
               <div className="p-12">
                 <div className="flex gap-5 flex-wrap md:flex-nowrap">
@@ -159,20 +159,20 @@ export default function Client() {
             </form>
 
             {/* === CONTACT INFO === */}
-            <div className="flex flex-col justify-center bg-[rgba(0,0,0,0.5)] border-4 border-[#7c009b59] rounded-xl mx-8 md:mx-0 relative z-50 mt-24 md:mt-0">
+            <div className="flex flex-col justify-center bg-[rgba(0,0,0,0.5)] border-4 border-[#7c009b59] rounded-xl mx-8 md:mx-0 relative z-50 my-12 md:mt-0">
               <div>
                 <h3 className="text-[#7D009B] underline py-2 mx-5 font-bold text-3xl">
                   Contact Information
                 </h3>
-                <div className="flex m-5">
-                  <img src={email} alt="email icon" />
+                <div className="flex items-center m-5">
+                  <img src={email} className="w-[50px] h-[50px]" alt="email icon" />
                   <div className="px-5">
                     <p className="text-[#7D009B]">Email:</p>
                     <p>info@supernova-gaming.com</p>
                   </div>
                 </div>
-                <div className="flex m-5">
-                  <img src={phone} alt="phone icon" />
+                <div className="flex items-center m-5">
+                  <img src={phone} className="w-[50px] h-[50px]" alt="phone icon" />
                   <div className="px-5">
                     <p className="text-[#7D009B]">Phone Number:</p>
                     <p>+20 15 0393 3933</p>

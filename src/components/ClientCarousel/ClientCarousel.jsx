@@ -15,55 +15,91 @@ export default function ClientCarousel() {
   const isDragging = useRef(false);
   const startX = useRef(0);
   const scrollLeft = useRef(0);
+  const animationFrameId = useRef(null);
 
-  useEffect(() => {
-    const track = trackRef.current;
-    let animationFrameId;
-    let speed = 0.5;
+  const speed = 0.5;
 
-    const scroll = () => {
+  // Auto scroll loop
+  const scroll = () => {
+    if (!isDragging.current) { // only scroll when NOT dragging
+      const track = trackRef.current;
       track.scrollLeft += speed;
       if (track.scrollLeft >= track.scrollWidth / 2) {
         track.scrollLeft = 0;
       }
-      animationFrameId = requestAnimationFrame(scroll);
+    }
+    animationFrameId.current = requestAnimationFrame(scroll);
+  };
+
+  useEffect(() => {
+    animationFrameId.current = requestAnimationFrame(scroll);
+
+    const track = trackRef.current;
+
+    // Native touch event listeners to enable preventDefault on touchmove for iOS
+    const onTouchStart = (e) => {
+      isDragging.current = true;
+      startX.current = e.touches[0].pageX - track.offsetLeft;
+      scrollLeft.current = track.scrollLeft;
     };
 
-    animationFrameId = requestAnimationFrame(scroll);
-    return () => cancelAnimationFrame(animationFrameId);
+    const onTouchMove = (e) => {
+      if (!isDragging.current) return;
+      const x = e.touches[0].pageX - track.offsetLeft;
+      const walk = x - startX.current;
+      track.scrollLeft = scrollLeft.current - walk;
+      e.preventDefault(); // Prevent vertical scroll on iOS
+    };
+
+    const onTouchEnd = () => {
+      isDragging.current = false;
+    };
+
+    // Add native listeners with passive: false so preventDefault works on iOS
+    track.addEventListener('touchstart', onTouchStart, { passive: false });
+    track.addEventListener('touchmove', onTouchMove, { passive: false });
+    track.addEventListener('touchend', onTouchEnd);
+
+    // Also add mouse event listeners for desktop dragging
+    const onMouseDown = (e) => {
+      isDragging.current = true;
+      startX.current = e.pageX - track.offsetLeft;
+      scrollLeft.current = track.scrollLeft;
+    };
+    const onMouseMove = (e) => {
+      if (!isDragging.current) return;
+      const x = e.pageX - track.offsetLeft;
+      const walk = x - startX.current;
+      track.scrollLeft = scrollLeft.current - walk;
+    };
+    const onMouseUp = () => {
+      isDragging.current = false;
+    };
+    const onMouseLeave = () => {
+      isDragging.current = false;
+    };
+
+    track.addEventListener('mousedown', onMouseDown);
+    track.addEventListener('mousemove', onMouseMove);
+    track.addEventListener('mouseup', onMouseUp);
+    track.addEventListener('mouseleave', onMouseLeave);
+
+    return () => {
+      cancelAnimationFrame(animationFrameId.current);
+
+      track.removeEventListener('touchstart', onTouchStart);
+      track.removeEventListener('touchmove', onTouchMove);
+      track.removeEventListener('touchend', onTouchEnd);
+
+      track.removeEventListener('mousedown', onMouseDown);
+      track.removeEventListener('mousemove', onMouseMove);
+      track.removeEventListener('mouseup', onMouseUp);
+      track.removeEventListener('mouseleave', onMouseLeave);
+    };
   }, []);
 
-  const startDrag = (x) => {
-    isDragging.current = true;
-    startX.current = x - trackRef.current.offsetLeft;
-    scrollLeft.current = trackRef.current.scrollLeft;
-  };
-
-  const moveDrag = (x) => {
-    if (!isDragging.current) return;
-    const walk = x - startX.current;
-    trackRef.current.scrollLeft = scrollLeft.current - walk;
-  };
-
-  const endDrag = () => {
-    isDragging.current = false;
-  };
-
   return (
-    <div
-      className="carousel"
-      ref={trackRef}
-      onMouseDown={(e) => startDrag(e.pageX)}
-      onMouseMove={(e) => moveDrag(e.pageX)}
-      onMouseUp={endDrag}
-      onMouseLeave={endDrag}
-      onTouchStart={(e) => startDrag(e.touches[0].pageX)}
-      onTouchMove={(e) => {
-        moveDrag(e.touches[0].pageX);
-        e.preventDefault(); // Prevent vertical scroll on mobile
-      }}
-      onTouchEnd={endDrag}
-    >
+    <div className="carousel" ref={trackRef}>
       <div className="carousel-track">
         {[...images, ...images].map((img, index) => (
           <div key={index} className="carousel-slide">

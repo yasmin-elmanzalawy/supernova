@@ -139,7 +139,7 @@ function DiagonalSwiper() {
 
 export default function About() {
   return (
-    <div className="bg-[#000000] overflow-hidden">
+    <div className="bg-[#000000] overflow-hidden pt-24 md:pt-36">
       <div
         style={{ backgroundImage: `url(${blobs})` }}
         className="bg-cover flex flex-col"
@@ -148,14 +148,14 @@ export default function About() {
           <Navbar />
         </div>
         {/* Main Content */}
-        <div className="relative z-10 flex flex-col gap-5 md:flex-row min-h-screen items-center justify-center md:-mt-24 px-8 text-white">
+        <div className="relative z-10 flex flex-col gap-5 md:flex-row min-h-screen items-center justify-center md:-mt-24 mt-5 px-8 text-white">
           {/* Left */}
           <div className="md:w-1/2 mb-12 md:mb-0 md:p-12 p-4">
             <h3 className="text-2xl md:text-4xl font-bold mb-4 uppercase text-purple-400">
               <span className="text-white">Parallel</span> Universe{" "}
               <span className="text-white">for</span> Gamers
             </h3>
-            <p className="text-xl md:text-2xl text-gray-300">
+            <p className="text-lg md:text-2xl text-gray-300">
               SuperNova Gaming (SNG) is a fully remote gaming organization—not
               just an Esports organization, but a vibrant gaming community
               fueled by passion and dedication. Established in 2019, we have
@@ -166,9 +166,9 @@ export default function About() {
           </div>
 
           {/* Right - Counters */}
-          <div className="md:w-1/2 flex flex-col items-center justify-center p-8 rounded-xl bg-[#a484a918]">
+          <div className="md:w-1/2 flex flex-col items-center justify-center p-4 rounded-xl bg-[#a484a918]">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-6xl font-bold mb-4">
+              <h2 className="text-2xl md:text-4xl font-bold mb-4">
                 Super Nova Gaming In Numbers
               </h2>
               <p className="text-lg md:text-2xl text-gray-300">
@@ -212,11 +212,11 @@ export default function About() {
           </div>
         </div>
         {/* Second Section */}
-        <div className="text-white relative z-10 flex flex-col gap-5 md:flex-row min-h-screen items-center justify-center md:-my-24 my-24 px-20">
+        <div className="text-white relative z-10 flex flex-col gap-5 md:flex-row min-h-screen items-center justify-center md:-my-24 my-24 px-5 md:px-20">
           <div className="md:w-1/2">
             <div className="mb-8 ">
               <h3 className="text-2xl md:text-5xl py-4">Our Mission</h3>
-              <p className="text-xl md:text-2xl font-light">
+              <p className="text-lg md:text-2xl font-light">
                 To revolutionize gaming experiences globally By providing
                 high-quality, innovative solutions that cater to the unique
                 needs of our clients. From tournament management to content
@@ -225,7 +225,7 @@ export default function About() {
             </div>
             <div>
               <h3 className="text-2xl md:text-5xl py-4">Our Vision</h3>
-              <p className="text-xl md:text-2xl font-light">
+              <p className="text-lg md:text-2xl font-light">
                 To support organizations in enhancing tournament management,
                 simplifying workflows, and boosting media and content creation.
                 We believe in collaboration to elevate and advance the gaming

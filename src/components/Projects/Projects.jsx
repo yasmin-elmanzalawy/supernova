@@ -11,14 +11,12 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
 
-
 export default function Projects() {
   return (
     <div className="relative bg-[#000000]  overflow-hidden">
-
       <div
         style={{ backgroundImage: `url(${blobs})` }}
-        className="bg-cover bg-center flex flex-col"
+        className="bg-cover bg-center flex flex-col  pt-24 md:pt-36"
       >
         <div className="z-50">
           <Navbar />
@@ -34,21 +32,14 @@ export default function Projects() {
           <div className="text-center z-10 px-4 my-24 md:mt-0">
             {/* flex-1 flex flex-col md:flex-row items-center justify-center relative */}
             <h3
-              className="text-3xl md:text-5xl font-medium text-white my-8"
-              style={{
-                WebkitTextStroke: "2px #5A3392", 
-                textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", 
-              }}
+              className="text-center text-4xl font-bold mt-5 md:mt-12 text-white py-8"
             >
               Our Past Projects
             </h3>
 
             <p
-              className="text-2xl md:text-3xl font-normal text-white "
-              style={{
-                WebkitTextStroke: "1px #5A3392", 
-                textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", 
-              }}
+              className="text-center text-white text-2xl p-5 "
+             
             >
               Elevating Gaming Through Content & Esports
             </p>
@@ -79,11 +70,11 @@ export default function Projects() {
               />
             </div>
             <Link to="/356games">
-            <div>
-              <button className=" absolute bottom-0 self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all translate-x-[-50%] mb-5 border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
-                Read More
-              </button>
-            </div>
+              <div>
+                <button className=" absolute bottom-0 self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all translate-x-[-50%] mb-5 border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
+                  Read More
+                </button>
+              </div>
             </Link>
           </div>
           <div className="group relative rounded-lg border-4 m-7 border-[#7c009b59] text-white text-center w-[90vw] md:w-[40vw] h-[60vh] overflow-hidden">
@@ -96,17 +87,17 @@ export default function Projects() {
 
             <div className="w-[300px] m-auto md:mt-12 mt-12 transition-opacity duration-500 ease-in-out opacity-0 group-hover:opacity-100">
               <img
-                src={arena} 
+                src={arena}
                 alt="Gaming Visual"
                 className="w-[full] h-full object-cover"
               />
             </div>
             <Link to="/arena">
-            <div>
-              <button className=" absolute bottom-0 self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all translate-x-[-50%] mb-5 border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
-                Read More
-              </button>
-            </div>
+              <div>
+                <button className=" absolute bottom-0 self-start text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all translate-x-[-50%] mb-5 border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
+                  Read More
+                </button>
+              </div>
             </Link>
           </div>
         </div>
@@ -119,8 +110,8 @@ export default function Projects() {
           <p
             className="text-center md:px-64 px-12 py-32 text-2xl md:text-4xl font-normal z-50 relative text-white mb-4"
             style={{
-              WebkitTextStroke: "1px #5A3392", 
-              textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", 
+              WebkitTextStroke: "1px #5A3392",
+              textShadow: "0 0 5px rgba(0, 0, 0, 0.7)",
             }}
           >
             Empowering Gaming Brands with Creative Content, Engaging

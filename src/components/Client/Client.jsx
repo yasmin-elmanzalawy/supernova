@@ -9,12 +9,11 @@ import Planet from "../Planet/Planet";
 export default function Client() {
   return (
     <div>
-      <div className="bg-[#000000] overflow-hidden text-white">
+      <div className="bg-[#000000] overflow-hidden text-white  pt-24 md:pt-36">
         <div
           style={{ backgroundImage: `url(${blobs})` }}
           className="bg-cover flex flex-col"
         >
-          {" "}
           <div className="z-50">
             <Navbar />
           </div>

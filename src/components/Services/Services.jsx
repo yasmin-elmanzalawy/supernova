@@ -42,8 +42,7 @@ export default function Services() {
     },
     {
       title: "ASSETS CREATION - VIDEO EDITING",
-      description:
-        "INNOVATIVE AND CAPTIVATING DESIGN FOR GAMING ASSETS",
+      description: "INNOVATIVE AND CAPTIVATING DESIGN FOR GAMING ASSETS",
       bg: managingbg,
     },
     {
@@ -55,42 +54,27 @@ export default function Services() {
   ];
 
   return (
-    <div>
+    <div >
       {/* Hero Section */}
-      <div
-        className="relative bg-cover overflow-hidden z-50 h-[100vh] bg-[radial-gradient(ellipse_at_center,_#7D009B,_#000000)]"
-        // style={{ backgroundImage: `url(${blobs})` }}
+    <div
+        style={{ backgroundImage: `url(${blobs})` }}
+        className="bg-cover bg-[#000000]  overflow-hidden bg-center flex flex-col  pt-24 md:pt-36"
       >
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-
-        {/* Shooting stars */}
-        {stars.map((starItem, index) => (
-          <img
-            key={index}
-            src={star}
-            alt="star"
-            className="star"
-            style={{
-              top: `${starItem.top}px`,
-              left: `${starItem.left}px`,
-              animationDelay: `${starItem.delay}s`,
-            }}
-          />
-        ))}
-
-        <div className="z-50 relative">
+        <div className="z-50">
           <Navbar />
-          <h2 className="text-center text-4xl font-bold mt-24 md:mt-12 text-white py-8">
-            Our services
+        </div>
+        <div className="relative">
+          <h2 className="text-center text-4xl font-bold mt-5 md:mt-12 text-white py-8">
+            Our Services
           </h2>
-          <p className="text-center text-white text-2xl px-5">
+          <p className="text-center text-white text-2xl p-5">
             Customizable Services that suit your needs
           </p>
-          <img
+          {/* <img
             className="w-[350px] m-auto"
             src={servicesmask}
             alt="masked face"
-          />
+          /> */}
         </div>
       </div>
 

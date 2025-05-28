@@ -3,6 +3,7 @@ import team from "../../assets/team.png";
 import blobs from "../../assets/blobs.png";
 import union from "../../assets/Union.png";
 import stars from "../../assets/stars.png";
+import abdelrahmanMesbah from "../../assets/AMesbah.png";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
@@ -160,7 +161,7 @@ export default function Teams() {
 
   return (
     <div>
-      <div className="bg-[#000000] overflow-hidden text-white">
+      <div className="bg-[#000000] overflow-hidden text-white  pt-24 md:pt-36">
         <div
           style={{ backgroundImage: `url(${blobs})` }}
           className="bg-cover flex flex-col "
@@ -169,7 +170,9 @@ export default function Teams() {
             <Navbar />
           </div>
           <div className="text-center my-5">
-            <h4 className="md:text-5xl text-3xl m-5">Welcome to supernova team</h4>
+            <h4 className="md:text-5xl text-3xl m-5">
+              Welcome to supernova team
+            </h4>
             <p className="md:text-xl text-xl my-5">
               Meet the team that creates the <span>Magic</span>{" "}
             </p>
@@ -194,16 +197,26 @@ export default function Teams() {
                 <div style={cardBackgroundStyles}>
                   <div style={innerBorder}>
                     <img src={stars} alt="Stars" style={starsStyles} />
-                    <img src={team} alt="Team" style={teamStyles} />
+                    <img
+                      src={
+                        member.name === "Abdelrahman Mesbah"
+                          ? abdelrahmanMesbah
+                          : team
+                      }
+                      alt={member.nickname}
+                      style={teamStyles}
+                      className="rounded-xl absolute inset-0 mt-10 "
+                    />
+
                     <img src={union} alt="Union" style={unionStyles} />
                   </div>
                 </div>
-                <div style={memberInfoStyles}>
+                <div style={memberInfoStyles} className=" bg-black/70 shadow-lg backdrop-blur-sm">
                   <h3 style={memberNameStyles}>{member.name}</h3>
                   <p style={nickname}>“{member.nickname}”</p>
                   <p style={memberDescStyles}>{member.role}</p>
                 </div>
-                <div
+                <div cl
                   style={{
                     ...descOverlayStyles,
                     ...(hoveredIndex === index ? descOverlayVisible : {}),
