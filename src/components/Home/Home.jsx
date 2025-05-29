@@ -16,8 +16,8 @@ export default function Home() {
 
   return (
     <div className=" overflow-hidden">
-      <div
-        className="relative hero-section h-screen bg-cover bg-fixed bg-[position:30%] md:bg-[position:20%] lg:bg-[position:0%] overflow-hidden mb-[-10px] "
+     <div
+        className="relative hero-section h-screen bg-cover bg-[position:30%] md:bg-[position:20%] lg:bg-[position:0%] overflow-hidden"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="absolute left-[-5px] right-[-5px] top-0 bottom-[-10px] bg-black opacity-60"></div>
@@ -108,17 +108,10 @@ export default function Home() {
       {/* our teams section */}
       <div className="bg-[linear-gradient(to_bottom,_#101010_0%,_#101010_70%,_#7D009B)]  py-14">
         <h3 className="md:text-5xl text-3xl pb-14 font-bold text-white text-center ">
-          Our Team
+          Ceo Message
         </h3>
         <TeamMembers></TeamMembers>
-        <Link to="/teams">
-          {" "}
-          <div className="flex justify-center my-14">
-            <button className="inline-block md:text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
-              Know More
-            </button>
-          </div>
-        </Link>
+       
       </div>
       <Footer></Footer>
     </div>

@@ -26,7 +26,7 @@ export default function Arena() {
             <Navbar />
           </div>
           <div>
-            <p className="text-center md:px-64 px-12 pt-5 text-2xl md:text-4xl relative font-bold text-[#5A3392]">
+            <p className="text-center md:px-64 px-12 pt-5 text-2xl md:text-4xl relative font-bold text-[#5A3392] mt-32">
               Uniting Gamers, Elevating Competition
             </p>
             <p className="text-center text-white py-12 px-12 md:text-xl">
@@ -76,10 +76,7 @@ export default function Arena() {
                       <div className="">
                         <h3
                           className="text-2xl md:text-2xl font-normal z-50 relative text-white "
-                          style={{
-                            WebkitTextStroke: "1px #5A3392", // Purple outline
-                            textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", // Optional shadow for a subtle effect
-                          }}
+                          
                         >
                           Bringing the Community Together
                         </h3>
@@ -117,10 +114,7 @@ export default function Arena() {
                       <div className="">
                         <h3
                           className="text-2xl md:text-2xl font-normal z-50 relative text-white "
-                          style={{
-                            WebkitTextStroke: "1px #5A3392", // Purple outline
-                            textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", // Optional shadow for a subtle effect
-                          }}
+                          
                         >
                           A Thrilling Finale
                         </h3>
@@ -149,10 +143,7 @@ export default function Arena() {
                       <div className="">
                         <h3
                           className="text-2xl md:text-2xl font-normal z-50 relative text-white "
-                          style={{
-                            WebkitTextStroke: "1px #5A3392", // Purple outline
-                            textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", // Optional shadow for a subtle effect
-                          }}
+                          
                         >
                           Bringing the Action to Life
                         </h3>
@@ -183,10 +174,7 @@ export default function Arena() {
                       <div className="">
                         <h3
                           className="text-2xl md:text-2xl font-normal z-50 relative text-white "
-                          style={{
-                            WebkitTextStroke: "1px #5A3392", // Purple outline
-                            textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", // Optional shadow for a subtle effect
-                          }}
+                          
                         >
                           Connecting with Players
                         </h3>
@@ -215,10 +203,7 @@ export default function Arena() {
                       <div className="">
                         <h3
                           className="text-2xl md:text-2xl font-normal z-50 relative text-white "
-                          style={{
-                            WebkitTextStroke: "1px #5A3392", // Purple outline
-                            textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", // Optional shadow for a subtle effect
-                          }}
+                          
                         >
                           Running a Smooth Tournament
                         </h3>

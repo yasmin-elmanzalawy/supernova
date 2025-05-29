@@ -7,6 +7,7 @@ import games from '../../assets/games.png';
 import arena from '../../assets/arena.png';
 import esportsga from '../../assets/esportsga.png';
 import tealflamingo from '../../assets/tealflamingo.png';
+import "./ClientCarousel.css";
 
 const images = [gb, playhera, frenzy, games, arena, esportsga, tealflamingo];
 
@@ -16,12 +17,12 @@ export default function ClientCarousel() {
   const startX = useRef(0);
   const scrollLeft = useRef(0);
   const animationFrameId = useRef(null);
-
   const speed = 0.5;
+  const isAutoScrolling = useRef(true);
 
-  // Auto scroll loop
+  // Auto scroll function
   const scroll = () => {
-    if (!isDragging.current) { // only scroll when NOT dragging
+    if (isAutoScrolling.current && !isDragging.current) {
       const track = trackRef.current;
       track.scrollLeft += speed;
       if (track.scrollLeft >= track.scrollWidth / 2) {
@@ -36,9 +37,10 @@ export default function ClientCarousel() {
 
     const track = trackRef.current;
 
-    // Native touch event listeners to enable preventDefault on touchmove for iOS
+    // Native touch handlers with passive:false
     const onTouchStart = (e) => {
       isDragging.current = true;
+      isAutoScrolling.current = false; // pause auto-scroll on touch
       startX.current = e.touches[0].pageX - track.offsetLeft;
       scrollLeft.current = track.scrollLeft;
     };
@@ -48,53 +50,59 @@ export default function ClientCarousel() {
       const x = e.touches[0].pageX - track.offsetLeft;
       const walk = x - startX.current;
       track.scrollLeft = scrollLeft.current - walk;
-      e.preventDefault(); // Prevent vertical scroll on iOS
+      e.preventDefault(); // prevent native scroll on iOS
     };
 
     const onTouchEnd = () => {
       isDragging.current = false;
+      isAutoScrolling.current = true; // resume auto-scroll
     };
 
-    // Add native listeners with passive: false so preventDefault works on iOS
-    track.addEventListener('touchstart', onTouchStart, { passive: false });
-    track.addEventListener('touchmove', onTouchMove, { passive: false });
-    track.addEventListener('touchend', onTouchEnd);
-
-    // Also add mouse event listeners for desktop dragging
+    // Mouse handlers for desktop
     const onMouseDown = (e) => {
       isDragging.current = true;
+      isAutoScrolling.current = false; // pause auto-scroll on drag
       startX.current = e.pageX - track.offsetLeft;
       scrollLeft.current = track.scrollLeft;
+      track.style.cursor = 'grabbing';
     };
+
     const onMouseMove = (e) => {
       if (!isDragging.current) return;
       const x = e.pageX - track.offsetLeft;
       const walk = x - startX.current;
       track.scrollLeft = scrollLeft.current - walk;
     };
-    const onMouseUp = () => {
+
+    const onMouseUpOrLeave = () => {
       isDragging.current = false;
+      isAutoScrolling.current = true; // resume auto-scroll
+      track.style.cursor = 'grab';
     };
-    const onMouseLeave = () => {
-      isDragging.current = false;
-    };
+
+    // Attach native listeners with passive: false for touch
+    track.addEventListener('touchstart', onTouchStart, { passive: false });
+    track.addEventListener('touchmove', onTouchMove, { passive: false });
+    track.addEventListener('touchend', onTouchEnd);
 
     track.addEventListener('mousedown', onMouseDown);
     track.addEventListener('mousemove', onMouseMove);
-    track.addEventListener('mouseup', onMouseUp);
-    track.addEventListener('mouseleave', onMouseLeave);
+    track.addEventListener('mouseup', onMouseUpOrLeave);
+    track.addEventListener('mouseleave', onMouseUpOrLeave);
+
+    // Initial cursor
+    track.style.cursor = 'grab';
 
     return () => {
       cancelAnimationFrame(animationFrameId.current);
-
       track.removeEventListener('touchstart', onTouchStart);
       track.removeEventListener('touchmove', onTouchMove);
       track.removeEventListener('touchend', onTouchEnd);
 
       track.removeEventListener('mousedown', onMouseDown);
       track.removeEventListener('mousemove', onMouseMove);
-      track.removeEventListener('mouseup', onMouseUp);
-      track.removeEventListener('mouseleave', onMouseLeave);
+      track.removeEventListener('mouseup', onMouseUpOrLeave);
+      track.removeEventListener('mouseleave', onMouseUpOrLeave);
     };
   }, []);
 
@@ -103,7 +111,7 @@ export default function ClientCarousel() {
       <div className="carousel-track">
         {[...images, ...images].map((img, index) => (
           <div key={index} className="carousel-slide">
-            <img src={img} alt="client" className="carousel-img" />
+            <img src={img} alt="client" className="carousel-img" draggable={false} />
           </div>
         ))}
       </div>

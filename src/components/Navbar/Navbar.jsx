@@ -21,7 +21,7 @@ export default function Navbar() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300  ${
+        className={`fixed top-0 left-0 right-0  w-full transition-all duration-300 z-[111111] ${
           isScrolled ? "h-16  bg-black/50 shadow-lg backdrop-blur-sm" : "h-24"
         }`}
       >
@@ -165,7 +165,7 @@ export default function Navbar() {
           <div
             className={`md:hidden menu ${
               isOpen ? "open" : ""
-            } rounded-lg flex items-center justify-center h-[80vh] text-white m-10 bg-opacity-95 absolute top-20 left-0 right-0 z-50`}
+            } rounded-lg flex items-center justify-center h-[80vh] text-white m-10 bg-opacity-95 absolute top-20 left-0 right-0 z-[111111111]`}
           >
             <ul className="flex flex-col justify-between items-center text-3xl">
               <li>

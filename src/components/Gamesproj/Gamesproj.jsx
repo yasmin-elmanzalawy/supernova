@@ -23,7 +23,7 @@ export default function Gamesproj() {
             <Navbar />
           </div>
           <div>
-            <p className="text-center md:px-64 px-12 pt-5 text-2xl md:text-4xl relative font-bold   text-[#5A3392]">
+            <p className="text-center md:px-64 px-12 pt-5 text-2xl md:text-4xl relative font-bold   text-[#5A3392] mt-32  ">
               365Games – Bringing Gaming to Life Through Engaging Content
             </p>
           </div>
@@ -68,10 +68,7 @@ export default function Gamesproj() {
                     <div>
                       <h3
                         className="text-2xl md:text-2xl font-normal z-50 relative text-white "
-                        style={{
-                          WebkitTextStroke: "1px #5A3392", // Purple outline
-                          textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", // Optional shadow for a subtle effect
-                        }}
+                        
                       >
                         A Creative Collaboration Begins
                       </h3>
@@ -96,10 +93,7 @@ export default function Gamesproj() {
                     <div>
                       <h3
                         className="text-2xl md:text-2xl font-normal z-50 relative text-white "
-                        style={{
-                          WebkitTextStroke: "1px #5A3392", // Purple outline
-                          textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", // Optional shadow for a subtle effect
-                        }}
+                        
                       >
                         From Ideas to Impactful Videos
                       </h3>
@@ -127,10 +121,7 @@ export default function Gamesproj() {
                   <div>
                     <h3
                       className="text-2xl md:text-2xl font-normal z-50 relative text-white "
-                      style={{
-                        WebkitTextStroke: "1px #5A3392", // Purple outline
-                        textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", // Optional shadow for a subtle effect
-                      }}
+                    
                     >
                       Optimized for Social Media Success
                     </h3>
@@ -154,10 +145,7 @@ export default function Gamesproj() {
                   <div>
                     <h3
                       className="text-2xl md:text-2xl font-normal z-50 relative text-white "
-                      style={{
-                        WebkitTextStroke: "1px #5A3392", // Purple outline
-                        textShadow: "0 0 5px rgba(0, 0, 0, 0.7)", // Optional shadow for a subtle effect
-                      }}
+                   
                     >
                       A Partnership Built on Creativity
                     </h3>
