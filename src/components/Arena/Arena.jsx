@@ -75,7 +75,7 @@ export default function Arena() {
                       </div>
                       <div className="">
                         <h3
-                          className="text-2xl md:text-2xl font-normal z-50 relative text-white "
+                          className="text-2xl md:text-2xl font-normal  relative text-white "
                           
                         >
                           Bringing the Community Together
@@ -113,7 +113,7 @@ export default function Arena() {
                       </div>
                       <div className="">
                         <h3
-                          className="text-2xl md:text-2xl font-normal z-50 relative text-white "
+                          className="text-2xl md:text-2xl font-normal relative text-white "
                           
                         >
                           A Thrilling Finale
@@ -142,7 +142,7 @@ export default function Arena() {
                       </div>
                       <div className="">
                         <h3
-                          className="text-2xl md:text-2xl font-normal z-50 relative text-white "
+                          className="text-2xl md:text-2xl font-normal relative text-white "
                           
                         >
                           Bringing the Action to Life
@@ -173,7 +173,7 @@ export default function Arena() {
                       </div>
                       <div className="">
                         <h3
-                          className="text-2xl md:text-2xl font-normal z-50 relative text-white "
+                          className="text-2xl md:text-2xl font-normal relative text-white "
                           
                         >
                           Connecting with Players
@@ -202,7 +202,7 @@ export default function Arena() {
                       </div>
                       <div className="">
                         <h3
-                          className="text-2xl md:text-2xl font-normal z-50 relative text-white "
+                          className="text-2xl md:text-2xl font-normal relative text-white "
                           
                         >
                           Running a Smooth Tournament

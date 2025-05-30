@@ -32,7 +32,7 @@ export default function Footer() {
           }}
         />
       ))}
-      <div className="relative z-50 text-white p-4 flex-wrap md:flex-nowrap flex justify-center">
+      <div className="relative  text-white p-4 flex-wrap md:flex-nowrap flex justify-center">
         <div className=" md:w-[30%] text-center my-12">
           <h3 className="text-3xl font-extrabold">Supernova</h3>
           <p className="py-12 text-xl">PARLLEL UNIVARESE FOR GAMERS</p>

@@ -19,9 +19,9 @@ export default function Navbar() {
   }, []);
 
   return (
-    <>
+    <div className="z-[99999999999999999]">
       <nav
-        className={`fixed top-0 left-0 right-0  w-full transition-all duration-300 z-[111111] ${
+        className={`fixed top-0 left-0 right-0  w-full transition-all duration-300  ${
           isScrolled ? "h-16  bg-black/50 shadow-lg backdrop-blur-sm" : "h-24"
         }`}
       >
@@ -220,6 +220,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 }

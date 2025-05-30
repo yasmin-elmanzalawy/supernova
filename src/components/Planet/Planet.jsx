@@ -101,7 +101,7 @@ export default function Planet() {
         <div className="orbit orbit-4"></div>
         <div className="planet"></div>
 
-        <div className="bg-[rgba(0,0,0,0.5)] border-4 border-[#7c009b59] rounded-xl mx-8 md:mx-0 relative z-50 mt-24 md:mt-0">
+        <div className="bg-[rgba(0,0,0,0.5)] border-4 border-[#7c009b59] rounded-xl mx-8 md:mx-0 relative  mt-24 md:mt-0">
           <form onSubmit={handleSubmit} className="p-12">
             <div className="flex gap-5 flex-wrap md:flex-nowrap">
               <div className="m-5">

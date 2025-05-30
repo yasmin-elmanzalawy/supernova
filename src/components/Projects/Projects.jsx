@@ -102,17 +102,14 @@ export default function Projects() {
           </div>
         </div>
       </div>
-      <div className=" bg-[#000000] z-50 ">
+      <div className=" bg-[#000000]  ">
         <div
           style={{ backgroundImage: `url(${bgsec})` }}
-          className="bg-cover bg-center relative z-50"
+          className="bg-cover bg-center relative "
         >
           <p
-            className="text-center md:px-64 px-12 py-32 text-2xl md:text-4xl font-normal z-50 relative text-white mb-4"
-            style={{
-              WebkitTextStroke: "1px #5A3392",
-              textShadow: "0 0 5px rgba(0, 0, 0, 0.7)",
-            }}
+            className="text-center md:px-64 px-12 py-32 text-2xl md:text-4xl font-normal  relative text-white mb-4"
+            
           >
             Empowering Gaming Brands with Creative Content, Engaging
             Experiences, and Unforgettable Esports Events.
@@ -128,7 +125,7 @@ export default function Projects() {
             style={{ clipPath: "inset(1px)" }}
           />
         </div>
-        <div className=" absolute z-50">
+        <div className=" absolute ">
           <img className="block " src={rings} alt="eclipse" />
         </div>
       </div>

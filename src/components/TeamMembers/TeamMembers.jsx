@@ -9,10 +9,9 @@ import './TeamMembers.css'
 export default function TeamMembers() {
   return (
     <div>
-      <div className="bg-[#000000] overflow-hidden pt-24 md:pt-12 text-white">
+      <div className=" overflow-hidden pt-24 md:pt-12 text-white">
         <div
-          style={{ backgroundImage: `url(${blobs})` }}
-          className="bg-cover flex flex-col"
+         
         >
           <div className="z-50">
             <Navbar />
@@ -33,9 +32,9 @@ export default function TeamMembers() {
               great things can happen when people who care come together...
           <Link to="/teams">
             {" "}
-            <div className="flex justify-center mt-14">
+            <div className="flex justify-center mt-14 mb-7 ">
               <button className="inline-block md:text-xl bg-[radial-gradient(circle,_rgba(255,255,255,0.3)_0%,_rgba(255,255,255,0)_100%)] text-white px-6 py-3 rounded-[10px] hover:shadow-[0_0_5px_3px_white] transition-all border shadow-[0_0_5px_2px_rgba(255,255,255,0.5)] ">
-                Know More
+                Read More
               </button>
             </div>
           </Link>

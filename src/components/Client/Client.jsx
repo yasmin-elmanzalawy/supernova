@@ -5,7 +5,6 @@ import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import Planet from "../Planet/Planet";
 
-
 export default function Client() {
   return (
     <div>
@@ -28,11 +27,19 @@ export default function Client() {
             <ClientCarousel></ClientCarousel>
           </div>
           <div className="my-24 ">
-            <p className="text-center my-5 text-xl md:text-3xl font-extrabold">Partner with Supernova Gaming for Unforgettable Activations</p>
-            <p className="text-center text-xl my-6">Let's create unforgettable esports experiences together. 
-              <br />Whether you're a brand, agency, or event organizer — we're ready to level up your engagement.</p>
+            <p className="text-center my-5 text-xl md:text-3xl font-extrabold">
+              Partner with Supernova Gaming for Unforgettable Activations
+            </p>
+            <p className="text-center text-xl my-6">
+              Let's create unforgettable esports experiences together.
+              <br />
+              Whether you're a brand, agency, or event organizer — we're ready
+              to level up your engagement.
+            </p>
           </div>
-          <div className="md:py-0 py-24"><Planet></Planet></div>
+          <div className="md:py-0 py-24">
+            <Planet></Planet>
+          </div>
         </div>
       </div>
       <Footer></Footer>

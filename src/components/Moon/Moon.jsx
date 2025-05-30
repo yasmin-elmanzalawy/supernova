@@ -35,9 +35,9 @@ export default function Moon() {
         </div>
         <div className="orbit orbit-4"></div>
         <div className="moon"></div>
-        <div className=" md:bg-[rgba(0,0,0,0.6)] md:border md:border-[rgba(91,51,146,0.79)] md:rounded-xl relative z-50">
+        <div className=" md:bg-[rgba(0,0,0,0.6)] md:border md:border-[rgba(91,51,146,0.79)] md:rounded-xl relative z-10">
           <div className="flex gap-3 h-[60vh] justify-center items-center md:w-[80vw] w-[60vw]  md:m-6 md:flex-nowrap flex-wrap py-24">
-            <div className="bg-[rgba(0,0,0,0.5)] text-white border-s border-b rounded-xl md:w-[33%] px-4 py-12 my-5  md:m-6 border-[#5b3392c9] relative z-50">
+            <div className="bg-[rgba(0,0,0,0.5)] text-white border-s border-b rounded-xl md:w-[33%] px-4 py-12 my-5  md:m-6 border-[#5b3392c9] relative z-10">
               <p className="text-7xl font-extrabold text-start absolute top-[-50px] bg-gradient-to-b from-purple-500 to-black bg-clip-text text-transparent">
                 1
               </p>
@@ -50,7 +50,7 @@ export default function Moon() {
               </p>
             </div>
 
-            <div className="bg-[rgba(0,0,0,0.5)] text-white border-s border-b rounded-xl px-4 py-12 my-5 md:w-[33%]  md:m-6  border-[#5b3392c9] relative z-50">
+            <div className="bg-[rgba(0,0,0,0.5)] text-white border-s border-b rounded-xl px-4 py-12 my-5 md:w-[33%]  md:m-6  border-[#5b3392c9] relative z-10">
               <p className="text-7xl font-extrabold text-start absolute top-[-50px] bg-gradient-to-b from-purple-500 to-black bg-clip-text text-transparent">
                 2
               </p>
@@ -61,7 +61,7 @@ export default function Moon() {
               </p>
             </div>
 
-            <div className="bg-[rgba(0,0,0,0.5)] text-white border-s border-b rounded-xl px-4 py-12 my-5 md:w-[33%] md:m-6 border-[#5b3392c9] relative z-50">
+            <div className="bg-[rgba(0,0,0,0.5)] text-white border-s border-b rounded-xl px-4 py-12 my-5 md:w-[33%] md:m-6 border-[#5b3392c9] relative z-10">
               <p className="text-7xl font-extrabold text-start absolute top-[-50px] bg-gradient-to-b from-purple-500 to-black bg-clip-text text-transparent">
                 3
               </p>

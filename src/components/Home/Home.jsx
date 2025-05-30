@@ -16,57 +16,55 @@ export default function Home() {
 
   return (
     <div className=" overflow-hidden">
-     <div
+      <div
         className="relative hero-section h-screen bg-cover bg-[position:30%] md:bg-[position:20%] lg:bg-[position:0%] overflow-hidden"
         style={{ backgroundImage: `url(${heroBg})` }}
       >
         <div className="absolute left-[-5px] right-[-5px] top-0 bottom-[-10px] bg-black opacity-60"></div>
-        <div className="z-3 relative">
+        <div className="z-50 relative ">
           <Navbar />
-          <div className="flex flex-col justify-center items-center text-white h-[100vh] text-center px-4">
-            <h1 className="text-4xl md:text-6xl font-bold m-5">
-              SUPERNOVA GAMING
-            </h1>
-            <p className="text-3xl md:text-4xl font-light m-5 ">
-             Powered by Events, Esports, and Immersive Experiences
-            </p>
+        </div>
+        <div className="relative flex flex-col justify-center items-center text-white h-[100vh] text-center px-4">
+          <h1 className="text-4xl md:text-6xl font-bold m-5">
+            SUPERNOVA GAMING
+          </h1>
+          <p className="text-3xl md:text-4xl font-light m-5 ">
+            Powered by Events, Esports, and Immersive Experiences
+          </p>
+
+          <div
+            className="relative flex items-center justify-center w-full max-w-2xl mt-12"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
+            <img
+              src={leftArrow}
+              alt="Left Arrow"
+              className={`w-20 sm:w-20 transition-transform duration-500 ${
+                hovered ? "md:-translate-x-10 -translate-x-4 -mr-2" : "-mr-10"
+              } relative top-10`}
+            />
 
             <div
-              className="relative flex items-center justify-center w-full max-w-2xl mt-12"
-              onMouseEnter={() => setHovered(true)}
-              onMouseLeave={() => setHovered(false)}
+              className={`h-2  transition-all duration-500 ${
+                hovered ? "w-24 sm:w-50 opacity-100" : "w-0 opacity-0"
+              }`}
             >
-              <img
-                src={leftArrow}
-                alt="Left Arrow"
-                className={`w-20 sm:w-20 transition-transform duration-500 ${
-                  hovered
-                    ? "md:-translate-x-10 -translate-x-4 -mr-2"
-                    : "-mr-10"
-                } relative top-10`}
-              />
-
-              <div
-                className={`h-2  transition-all duration-500 ${
-                  hovered ? "w-24 sm:w-50 opacity-100" : "w-0 opacity-0"
-                }`}
+              <Link
+                className=" font-russo drop-shadow-[0_0_3px_#7d009b] md:text-4xl text-2xl text-white group-hover:opacity-100"
+                to="/about"
               >
-                <Link
-                  className=" font-russo drop-shadow-[0_0_3px_#7d009b] md:text-4xl text-2xl text-white group-hover:opacity-100"
-                  to="/about"
-                >
-                  START 
-                </Link>{" "}
-              </div>
-
-              <img
-                src={rightArrow}
-                alt="Right Arrow"
-                className={`w-20 sm:w-20 transition-transform duration-500 ${
-                  hovered ? "md:translate-x-12 translate-x-4 -ml-2" : "-ml-10"
-                } relative top-3`}
-              />
+                START
+              </Link>{" "}
             </div>
+
+            <img
+              src={rightArrow}
+              alt="Right Arrow"
+              className={`w-20 sm:w-20 transition-transform duration-500 ${
+                hovered ? "md:translate-x-12 translate-x-4 -ml-2" : "-ml-10"
+              } relative top-3`}
+            />
           </div>
         </div>
       </div>
@@ -106,12 +104,11 @@ export default function Home() {
         <ClientCarousel></ClientCarousel>
       </div>
       {/* our teams section */}
-      <div className="bg-[linear-gradient(to_bottom,_#101010_0%,_#101010_70%,_#7D009B)]  py-14">
-        <h3 className="md:text-5xl text-3xl pb-14 font-bold text-white text-center ">
+      <div className="bg-[linear-gradient(to_bottom,_#101010_0%,_#101010_70%,_#7D009B)]  pt-32">
+        <h3 className="md:text-5xl text-3xl font-bold text-white text-center ">
           Ceo Message
         </h3>
         <TeamMembers></TeamMembers>
-       
       </div>
       <Footer></Footer>
     </div>

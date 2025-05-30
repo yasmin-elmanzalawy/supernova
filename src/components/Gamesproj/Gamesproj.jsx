@@ -67,7 +67,7 @@ export default function Gamesproj() {
                     </div>
                     <div>
                       <h3
-                        className="text-2xl md:text-2xl font-normal z-50 relative text-white "
+                        className="text-2xl md:text-2xl font-normal  relative text-white "
                         
                       >
                         A Creative Collaboration Begins
@@ -92,7 +92,7 @@ export default function Gamesproj() {
                     </div>
                     <div>
                       <h3
-                        className="text-2xl md:text-2xl font-normal z-50 relative text-white "
+                        className="text-2xl md:text-2xl font-normal  relative text-white "
                         
                       >
                         From Ideas to Impactful Videos
@@ -120,7 +120,7 @@ export default function Gamesproj() {
                   </div>
                   <div>
                     <h3
-                      className="text-2xl md:text-2xl font-normal z-50 relative text-white "
+                      className="text-2xl md:text-2xl font-normal  relative text-white "
                     
                     >
                       Optimized for Social Media Success
@@ -144,7 +144,7 @@ export default function Gamesproj() {
                   </div>
                   <div>
                     <h3
-                      className="text-2xl md:text-2xl font-normal z-50 relative text-white "
+                      className="text-2xl md:text-2xl font-normal  relative text-white "
                    
                     >
                       A Partnership Built on Creativity
