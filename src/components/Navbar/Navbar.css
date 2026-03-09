@@ -1,0 +1,108 @@
+.glow-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.glow-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px; 
+    height: 120px;
+    background: conic-gradient(from 0deg, black, purple, black);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+    z-index: 99;
+    pointer-events: none; 
+}
+
+@keyframes smooth-spiral {
+    0% { 
+        transform: translate(-50%, -50%) rotate(0deg) scale(0.8);
+        background: conic-gradient(from 0deg, black, purple, black);
+    }
+    50% { 
+        transform: translate(-50%, -50%) rotate(180deg) scale(1); 
+        background: conic-gradient(from 180deg, purple, black, purple);
+    }
+    100% { 
+        transform: translate(-50%, -50%) rotate(360deg) scale(0.8); 
+        background: conic-gradient(from 360deg, black, purple, black);
+    }
+}
+
+.glow-wrapper:hover .glow-circle {
+    opacity: 1;
+    animation: smooth-spiral 2.5s linear infinite;
+}
+
+/* Make sure the logo is above the glow */
+.logo {
+    position: relative;
+    z-index: 999;
+}
+
+
+/* smaller screens */
+.glow-circle-md {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px; 
+    height: 50px;
+    background: conic-gradient(from 0deg, black, purple, black);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+    z-index: 99;
+    pointer-events: none; 
+}
+.glow-wrapper:hover .glow-circle-md {
+    opacity: 1;
+    animation: smooth-spiral 2.5s linear infinite;
+}
+
+
+
+
+
+/* Initial state of the menu */
+.menu {
+    position: absolute;
+    top: 50px;  /* Position this just below the hamburger icon */
+    left: 0;
+    right: 0;
+    transform: scale(0);  /* Start from a very small scale */
+    transform-origin: top left; /* Make it expand from the top left (where the hamburger is) */
+    visibility: hidden; /* Initially hidden */
+    opacity: 0;
+    transition: transform 0.5s ease-out, opacity 0.3s ease-out, visibility 0s 0.5s; /* Adjust visibility delay for smooth transition */
+    background-color: rgba(18, 1, 22, 0.959); /* Black background with opacity */
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  /* When menu is open */
+  .menu.open {
+    transform: scale(1);  /* Grow to full size */
+    opacity: 1;  /* Fade in the menu */
+    visibility: visible; /* Make it visible */
+    transition: transform 0.5s ease-out, opacity 0.3s ease-out; /* Ensure the transition is smooth on open */
+  }
+  
+  /* Styling for the list items inside the menu */
+  .menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
