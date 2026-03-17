@@ -25,12 +25,7 @@ export default function Services() {
     {
       title: "GAMING COMMUNITY MANAGEMENT",
       description:
-        `The Core of Player Connection
-Your community is full of energy and passion, and we bring that to
-life. We jump into conversations, share the fun moments, and make
-everyone feel welcomed. Every interaction is a chance to spread
-positivity and build real connections.
-With us, your community doesn’t just grow, it lights up.`,
+        "SEAMLESS SETUP, EFFICIENT MANAGEMENT, AND VALUABLE CONSULTATION FOR GAMING COMMUNITIES, AND DISCORD SERVERS",
       bg: gcmbg,
     },
     {
@@ -42,14 +37,8 @@ With us, your community doesn’t just grow, it lights up.`,
     {
       title: "CONTENT CREATION, VOICE OVER AND SCRIPT WRITING",
       description:
-        `We bring ideas to life through content that captures attention
-and tells a story. Our team develops concepts, writes engaging
-scripts, and shapes narratives that fit your brand’s voice and
-purpose. Whether it’s a fast-paced reel, a promotional video, or a
-story-driven piece, we craft content that feels clear, creative, and
-built to connect with your audience. From planning to final
-wording, we make sure every line and every visual works
-together to leave a lasting impact.`
+        "HIGH QUALITY CREATION OF GAMING CONTENT INCLUDING ENGAGING VOICE OVERS AND WELL CRAFTED SCRIPTS.",
+      bg: assetcreationbg,
     },
     {
       title: "ASSETS CREATION - VIDEO EDITING",
@@ -57,12 +46,9 @@ together to leave a lasting impact.`
       bg: managingbg,
     },
     {
-      title: "SOCIAL MEDIA MANAGEMENT",
+      title: "GAMING SOCIAL MEDIA MANAGEMENT",
       description:
-        `Stay Connected, Stay Relevant
-A brand without a voice gets lost in the feed.
-We craft a social presence that feels alive,
-personal, and unmistakably.`,
+        "SKILLFUL TEAM FOR CLIENT SOCIAL MEDIA PLATFORMS WITH A DEDICATED FOCUS ON GAMING CONTENT",
       bg: hostingbg,
     },
   ];
